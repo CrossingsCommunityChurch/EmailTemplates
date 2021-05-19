@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<title>
+		</title>
+	</head>
+
+  <body class=""> 
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Xpress Template</title>
+    <style>
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+      /*All the styling goes here*/
+
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+      }
+
+      body {
+        background-color: #DCDCDC !important;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%; }
+        table td {
+          font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+          font-size: 14px;
+          vertical-align: top;
+      }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+      .body {
+        background-color: #DCDCDC !important;
+        width: 100%;
+      }
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 580px;
+        padding: 10px;
+        width: 580px;
+      }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 580px;
+        padding: 10px;
+      }
+
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #DCDCDC !important;
+        border-radius: 3px;
+        width: 100%;
+      }
+
+      .headerlogo{
+        background: #DCDCDC !important;
+        border-radius: 3px;
+        width: 100%;
+      }
+
+      .wrapper {
+        background: #DCDCDC !important;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 20px;
+      }
+
+      .content-block {
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+
+      .footer {
+        clear: both;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+          color: #DCDCDC !important;
+          font-size: 12px;
+          text-align: center;
+      }
+
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1 {
+        color: #1d242b !important;
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-weight: 800;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+		h2 {
+        color: #1d242b !important;
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0;
+        margin-bottom: 25px;
+      }
+		h3 {
+        color: #1d242b !important;
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 22px;
+      }
+		h4 {
+        color: #1d242b !important;
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.1;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+        h5 {
+        color: #869098 !important;
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.1;
+        margin: 0;
+        margin-bottom: 20px;
+        }
+      p {
+          color: black !important
+      }
+      p,
+      ul,
+      ol {
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+        p li,
+        ul li,
+        ol li {
+          list-style-position: inside;
+          margin-left: 5px;
+      }
+
+      a {
+        /* color: #1d242b !important; */
+        font-weight: bold;
+      }
+
+      /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+      .btn {
+        box-sizing: border-box;
+        width: 100%; }
+        .btn > tbody > tr > td {
+          padding-bottom: 15px; }
+        .btn table {
+          width: auto;
+      }
+        .btn table td {
+          /* background-color: #DCDCDC !important; */
+          border-radius: 5px;
+          text-align: center;
+      }
+        .btn a {
+          background-color: #838282 !important; 
+          border: solid 1px #DCDCDC !important;
+          border-radius: 5px;
+          box-sizing: border-box;
+          color: #DCDCDC !important;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0;
+          padding: 12px 25px;
+          text-decoration: none;
+          text-transform: capitalize;
+      }
+
+      .btn-primary {
+          background-color: #838282 !important;
+          border-radius: 30px;
+          padding: 1.3em;
+          text-decoration: none;
+          border: 2px solid #838282;
+          padding: 15px 40px 15px 40px;
+          font-size: 16px;
+      }
+
+      .btn-primary table td {
+        background-color: #DCDCDC !important;
+      }
+
+      .btn-primary a {
+        background-color: #838282 !important;
+        border-color: #DCDCDC !important;
+        color:#DCDCDC;
+      }
+
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0;
+      }
+
+      .first {
+        margin-top: 0;
+      }
+
+      .align-center {
+        text-align: center;
+      }
+
+      .align-right {
+        text-align: right;
+      }
+
+      .align-left {
+        text-align: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .mt0 {
+        margin-top: 0;
+      }
+
+      .mb0 {
+        margin-bottom: 0;
+      }
+
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0;
+      }
+
+      .powered-by a {
+        text-decoration: none;
+      }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid #DCDCDC !important;
+        margin: 20px 0;
+      }
+
+        /* -------------------------------------
+            CUSTOM CLASSES
+      ------------------------------------- */
+
+    .app-header {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .card-wrapper {
+        background-color: #fff !important;
+        border-radius: 10px;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-image {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+
+    .card-info {
+        align-items: center;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 11px;
+    }
+    .connect-wrapper {
+        align-items: center;
+    }
+
+    .media-wrapper {
+        width: 100%;
+    }
+
+    .media {
+        text-align: center;
+        width: 20px
+    }
+
+    .crossingsLogo {
+      padding-bottom:0;
+      display:inline!important;
+      vertical-align:bottom;
+      border:0;height:auto;
+      outline:none;
+      text-decoration:none;
+    }
+
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+        table[class=body] h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important;
+        }
+        table[class=body] p,
+        table[class=body] ul,
+        table[class=body] ol,
+        table[class=body] td,
+        table[class=body] span,
+        table[class=body] a {
+          font-size: 16px !important;
+        }
+        table[class=body] .wrapper,
+        table[class=body] .article {
+          padding: 10px !important;
+        }
+        table[class=body] .content {
+          padding: 0 !important;
+        }
+        table[class=body] .container {
+          padding: 0 !important;
+          width: 100% !important;
+        }
+        table[class=body] .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+        table[class=body] .btn table {
+          width: 100% !important;
+        }
+        table[class=body] .btn a {
+          width: 100% !important;
+        }
+        table[class=body] .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important;
+        }
+      }
+
+      /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+        #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+        .btn-primary table td:hover {
+          /* background-color: #34495e !important; */
+        }
+        .btn-primary a:hover {
+          /* background-color: #34495e !important;
+          border-color: #34495e !important; */  
+          /* cursor:pointer; */
+        }           
+      }
+    </style>
+
+    <span id="preheader-text" class="preheader">Crossings Community Church</span>
+
+
+
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+      <tbody>
+	  	  <tr>
+          <td>&nbsp;</td>
+          <td class="container">
+            <div class="content">
+              <!-- START CENTERED WHITE CONTAINER -->
+              <table role="presentation" class="main">
+                <!-- START MAIN CONTENT AREA -->
+                <tbody>
+                    <tr>
+                        <td class="app-header">
+                            <img class= "crossingsLogo" align="center" src="https://ci3.googleusercontent.com/proxy/1UOdUZ-8sxo07Ny0cU7ENpSpmVUvlzqvCV8kYoubv68Rq-tv7JklIXM-qn-BKk5gj1o7_B11NFuUJc7iq9QbsWbW_JmJl98IMZk79Q7vFRavlZ_Ujs9q_Hh0I9sEyKWYj7xVRq-0m3zQJvJZw7A5lZl9qbc3tGtwxaw=s0-d-e1-ft#https://gallery.mailchimp.com/1b0d4591b722d806bd8574c75/images/174732ac-f34e-489e-9466-d638c6100d78.png" width="200" alt="">
+                        </td>   
+                    </tr>
+                  <tr>
+                    <td class="headerlogo">
+                      <!-- HEADER LOGO -->
+                      <div class="component component-image" data-state="component" data-image-width="" data-image-height="">
+                        <div>
+                        <a href="https://crossings.church">
+                          <img id="template-logo" src="/GetImage.ashx?Id=410576" data-instructions="Provide a PNG with a transparent background." style="width: 100%; height: auto; display: flex; justify-content: center; align-items: center;" height="" width="" data-imgcsswidth="full" alt="">
+                        </a>
+                        </div>
+                      </div>
+                      <!-- HEADER LOGO END -->
+                    </td>
+                  </tr>
+	  			        <tr>
+                    <td class="wrapper">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+	  					            <tr>
+	  						            <td>
+	  				                <!-- SIGNATURE AREA -->
+	  				                  <div class="structure-dropzone">
+	  				                  	<div class="dropzone">
+	  						                <div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
+                                                  <a href="https://crossings.church">
+                                                <img src="https://images.crossings.church/Images/Email%20template%20images/email-template-header-image.png" style="width: 100%;" data-imgcsswidth="full" alt="">
+                                            </a>
+                                        </div>
+	  						                  <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
+	  							                  <tbody>
+	  								                  <tr>
+	  									                  <td class="js-component-text-wrapper" style="padding-top: 20px;">
+                                                            <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component">
+                                                                <h2 style="text-align: center; margin-top: 10px;">Email Title</h2>
+	  										                    <p style="text-align: center; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
+                                                            </div>
+                                          <div style="text-align: center;">
+                                            <a><button class="btn-primary" type="btn-primary" style="margin-top: 25px; color:#DCDCDC">Share</a></button>
+                                          </div>
+	  									                  </td>
+	  								                  </tr>
+	  							                  </tbody>
+	  						                  </table>
+                                                <div class="component component-divider" data-state="component">
+                                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 30px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
+                                                </div>
+
+
+                                            <!-- Event Cards -->
+                                            <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
+                                                <tbody>
+                                                    <tr>
+                                                        {%- assign currentDate = 'Now' | Date  -%} 
+                                                        {%- contentchannelitem where:'ContentChannelId == 1' iterator:'items' -%}
+                                                        {%- for item in items -%}
+                                                        {%- if item.StartDateTime >= currentDate -%}
+                                                            {%- continue -%}
+                                                            {%- endif -%}
+                                                            {%- if item.ExpireDateTime <= currentDate -%}
+                                                            {%- continue -%}
+                                                            {%-endif-%}
+                                                            {%- assign ShouldInclude = item | Attribute:'IncludeInXpress'-%}
+                                                            {%- if ShouldInclude and ShouldInclude != empty -%}
+                                                            {%-assign subheading = item | Attribute:'Subheading'-%}
+                                                            {%-assign summary = item | Attribute:'SummaryText'-%}
+                                                                {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
+                                                            {%-assign imageSize = '/fit-in/600x600'-%}
+                                                            {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath'-%}
+                                                            {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
+                                                            {%-if imageUrlPath == ''-%}
+                                                              {%-assign imageAsset = ''-%}
+                                                            {%-endif-%}
+                                                        <div class="card-wrapper">
+                                                        	<div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
+                                                            <a href="https://crossings.church">
+                                                              <img class="card-image" src={{imageAsset | ToJSON}} style="width: 100%;" data-imgcsswidth="full" alt="">
+                                                            </a>
+                                                          </div>
+                                                            <span style="width:10%"></span>
+                                                            <div class="card-info">
+                                                                <h3 style="margin: 20px 0px 10px 0px;">{{ item.Title }}</h4>
+                                                                <h5 style="margin-bottom: 5px;">{{ subheading }}</h5>
+                                                                <p>{{ summary }}</p>
+
+
+                                                            </div>
+                                                            <span style="width:10%"></span>
+                                                        </div>
+                                                                {%-endif-%}
+                                                        {%- endfor -%}
+                                                        {%- endcontentchannelitem -%}
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                            <!-- Connect With Us  -->
+                                                <div class="component component-divider" data-state="component">
+                                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 50px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
+                                                </div>
+                                                <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
+                                                    <tr>
+                                                        <div class="connect-wrapper">
+                                                            <h3 style="text-align: center;">Connect With Us!</h3>
+                                                            <div class="media-wrapper">
+                                                                <td class="media">
+                                                                    <i style="color: #AFAFAF" class="fa fa-facebook fa-2x"></i>
+                                                                    <a href="https://www.facebook.com/crossingsokc" target="_blank">
+                                                                 </a>
+                                                                </td>
+                                                                <td class="media">
+                                                                    <i style="color: #838181" class="fa fa-instagram fa-2x"></i>
+                                                                    <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                                                                 </a>
+                                                                </td>
+                                                                <td class="media">
+                                                                    <i style="color: #989797"class="fa fa-vimeo fa-2x"></i>
+                                                                    <a href="https://www.vimeo.com/mycrossings" target="_blank">
+                                                                 </a>
+                                                                </td>
+                                                                <td class="media">
+                                                                    <i style="color: black"class="fa fa-soundcloud fa-2x"></i>
+                                                                    <a href="https://www.soundcloud.com/mycrossings" target="_blank">
+                                                                 </a>
+                                                                </td>
+                                                                <td class="media">
+                                                                    <i style="color: black"class="fa fa-youtube fa-2x"></i>
+                                                                    <a href="https://www.youtube.com/mycrossings" target="_blank">
+                                                                 </a>
+                                                                </td>
+                                                            </div>
+                                                        </div>
+                                                    </tr>
+                                                </table>
+                                                <!-- End Of Connect With Us  -->
+
+                                                <div class="component component-divider" data-state="component">
+                                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 20px; margin-bottom: 20px; background-position: initial initial; background-repeat: initial initial;">
+                                                </div>
+                                        </div>
+                                    </div>
+	  						    </td>
+                          </tr>
+                        </tbody>
+	  			            </table>
+                    </td>
+                  </tr>
+                  <!-- END MAIN CONTENT AREA -->
+                </tbody>
+	  	        </table>
+              <!-- END CENTERED CONTAINER -->
+              <!-- START FOOTER -->
+              <!-- Footer Social Links -->
+	  			    <table class="null" width="100%" >
+	  			    	<tbody>
+                  <tr>
+                    <td>
+                      <center>
+                        <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
+                          <tbody><tr>
+                            <td align="center" style="padding: 0px">
+                              <center>
+                                <!-- insert image -->
+                                <!-- <img src="" alt=""> -->
+                                <img class= "crossingsLogo" align="center" style="max-width:150px;" src="https://ci3.googleusercontent.com/proxy/1UOdUZ-8sxo07Ny0cU7ENpSpmVUvlzqvCV8kYoubv68Rq-tv7JklIXM-qn-BKk5gj1o7_B11NFuUJc7iq9QbsWbW_JmJl98IMZk79Q7vFRavlZ_Ujs9q_Hh0I9sEyKWYj7xVRq-0m3zQJvJZw7A5lZl9qbc3tGtwxaw=s0-d-e1-ft#https://gallery.mailchimp.com/1b0d4591b722d806bd8574c75/images/174732ac-f34e-489e-9466-d638c6100d78.png" alt="">
+                                <p style="margin-bottom: 0px;"> <small>14600 N Portland Ave</small></p>
+                                <p style="margin-bottom: 0px;"> <small>Oklahoma City, OK 73134</small></p>
+                              </center>
+                            </td>
+                          </tr>
+                        </tbody>
+                        </table>
+                      </center>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <center>
+                        <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
+                          <tbody><tr>
+                            <td align="center" style="padding: 12px;">
+                              <center>
+                                <p> <small>Copyright © 2021 Crossings Community Church. All rights reserved.</small></p>
+                                <p> <small> You are receiving this email because you are subscribed to the 40 Days of Prayer email list. To manage your subscriptions, click <a href="https://crossings.church/page/941">here.</a></small></p>
+                              </center>
+                            </td>
+                          </tr>
+                        </tbody>
+                        </table>
+                      </center>
+                    </td>
+                  </tr>
+	  			      </tbody>
+	  		      </table>
+              <!-- END FOOTER -->
+            </div>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
