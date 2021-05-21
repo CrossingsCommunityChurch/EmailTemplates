@@ -546,32 +546,33 @@
                                                             <div class="media-wrapper">
                                                               	{% raw %}
 	  			    	  							                                {% assign personCampus =  Person | Campus | Property:'Name' %}
-                                                                
-                                                                {% if personCampus == 'Crossings OKC' %}
                                                                 <td class="media">
+                                                                  {% if personCampus == 'Crossings OKC' %}
                                                                   <a href="https://www.facebook.com/crossingsokc" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
                                                                     </a>
+                                                                  {% elseif personCampus == 'Crossings Edmond' %}
+                                                                    <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                                  </a>
+                                                                  {% endif %}
+                                                                  {% endraw %}
                                                                 </td>
+                                                                
+                                                                {% raw %}
+	  			    	  							                                {% assign personCampus =  Person | Campus | Property:'Name' %}
                                                                 <td class="media">
+                                                                  {% if personCampus == 'Crossings OKC' %}
                                                                   <a href="https://www.instagram.com/crossingsokc" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                                                                  </a>
-                                                                </td>
-
-                                                                {% elseif personCampus == 'Crossings Edmond' %}
-                                                                <td class="media">
-                                                                  <a href="https://www.facebook.com/crossingsedmond" target="_blank">
-                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
                                                                     </a>
-                                                                </td>
-                                                                <td class="media">
+                                                                  {% elseif personCampus == 'Crossings Edmond' %}
                                                                   <a href="https://www.instagram.com/crossingsedmond" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
                                                                   </a>
+                                                                  {% endif %}
+                                                                  {% endraw %}
                                                                 </td>
-                                                                {% endif %}
-	  			    	  							                                {% endraw %}
                                                                 <td class="media">
                                                                   <a href="https://www.soundcloud.com/mycrossings" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
