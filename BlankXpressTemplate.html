@@ -482,54 +482,6 @@
 	  								                  </tr>
 	  							                  </tbody>
 	  						                  </table>
-
-                                            <!-- Event Cards -->
-                                            <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
-                                                <tbody>
-                                                    <tr>
-                                                        {%- assign currentDate = 'Now' | Date  -%} 
-                                                        {%- contentchannelitem where:'ContentChannelId == 1' iterator:'items' sort:'Priority desc' -%}
-                                                        {%- for item in items -%}
-                                                        {%- if item.StartDateTime >= currentDate -%}
-                                                            {%- continue -%}
-                                                            {%- endif -%}
-                                                            {%- if item.ExpireDateTime <= currentDate -%}
-                                                            {%- continue -%}
-                                                            {%-endif-%}
-                                                            {%- assign ShouldInclude = item | Attribute:'IncludeInXpress'-%}
-                                                            {%- if ShouldInclude and ShouldInclude != empty -%}
-                                                            {%-assign subheading = item | Attribute:'Subheading'-%}
-                                                            {%-assign summary = item | Attribute:'SummaryText'-%}
-                                                            {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
-                                                            {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
-                                                            {%-assign imageSize = '/fit-in/600x600'-%}
-                                                            {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath'-%}
-                                                            {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
-                                                            {%-if imageUrlPath == ''-%}
-                                                              {%-assign imageAsset = ''-%}
-                                                            {%-endif-%}
-                                                        <div class="card-wrapper">
-                                                        	<div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
-                                                            <a href={{detailsURL | StripHtml}} target="_blank">
-                                                              <img class="card-image" src={{imageAsset | ToJSON}} style="width: 100%;" data-imgcsswidth="full" alt="">
-                                                            </a>
-                                                          </div>
-                                                            <span style="width:10%"></span>
-                                                            <div class="card-info">
-                                                                <h3 style="margin: 20px 0px 10px 0px; text-align: center;">{{ item.Title }}</h4>
-                                                                <h5 style="margin-bottom: 5px;">{{ subheading }}</h5>
-                                                                <p>{{ summary }}</p>
-
-
-                                                            </div>
-                                                            <span style="width:10%"></span>
-                                                        </div>
-                                                                {%-endif-%}
-                                                        {%- endfor -%}
-                                                        {%- endcontentchannelitem -%}
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                             
                                             <!-- Connect With Us  -->
                                                 <div class="component component-divider" data-state="component">
