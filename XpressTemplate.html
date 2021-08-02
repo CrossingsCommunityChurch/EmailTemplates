@@ -488,7 +488,7 @@
                                                 <tbody>
                                                     <tr>
                                                         {%- assign currentDate = 'Now' | Date  -%} 
-                                                        {%- contentchannelitem where:'ContentChannelId == 1' iterator:'items' -%}
+                                                        {%- contentchannelitem where:'ContentChannelId == 1' iterator:'items' sort:'Priority desc' -%}
                                                         {%- for item in items -%}
                                                         {%- if item.StartDateTime >= currentDate -%}
                                                             {%- continue -%}
