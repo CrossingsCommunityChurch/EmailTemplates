@@ -93,7 +93,7 @@
         background: #F1F1F1 !important;
         box-sizing: border-box;
         border-radius: 3px;
-        padding: 20px;
+        padding: 20px 20px 10px 20px;
       }
 
       .content-block {
@@ -163,7 +163,7 @@
         margin-bottom: 20px;
         }
       p {
-          color: black !important
+          color: black;
       }
       p,
       ul,
@@ -320,6 +320,46 @@
       text-decoration: none !important;
     }
 
+        /* -------------------------------------
+         ACTION CLASSES
+      ------------------------------------- */
+
+    .actionItem {
+      text-align:center;
+      word-break: break-word;
+      padding: 2px;
+    }
+
+    .actionItem div {
+      border: solid 2px #CFCECE;
+      border-radius: 10px;
+      background-color: #e7e7e7;
+    }
+
+    .actionItem img {
+      padding-top:20px;
+    }
+
+    .actionItem a {
+      text-decoration: none;
+    }
+
+    .actionItem p {
+      color: #AFAFAF;
+      font-weight: 600;
+      padding-top:3px;
+    }
+
+    .actionWrapper {
+    color:#bdbdbd;
+    font-family:Lora,Georgia,Times New Roman,serif;
+    font-size: 12px;
+    line-height: 15=0%;
+    text-align:center;
+    width: 100%;
+    padding-top: 20px;
+    }
+
       /* -------------------------------------
           RESPONSIVE AND MOBILE FRIENDLY STYLES
       ------------------------------------- */
@@ -334,7 +374,7 @@
         table[class=body] td,
         table[class=body] span,
         table[class=body] a {
-          font-size: 16px !important;
+          font-size: 16px;
         }
         table[class=body] .wrapper,
         table[class=body] .article {
@@ -452,16 +492,80 @@
                                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
                                                             </div>
                                           <div style="text-align: center;">
-                                            <a href="https://crossings.church"><button class="btn-primary" type="btn-primary" style="margin-top: 25px; margin-bottom: 20px; color:#F1F1F1">Learn More</a></button>
+                                            <a href="https://crossings.church"><button class="btn-primary" type="btn-primary" style="margin-top: 25px; margin-bottom: 30px; color:#F1F1F1">Learn More</a></button>
                                           </div>
 	  									                  </td>
 	  								                  </tr>
 	  							                  </tbody>
 	  						                  </table>
+
+                                                <!-- content table -->
+              <center>
+                <table align="center" width:"100%" border="0" cellpadding="0" cellspacing="0" style="min-width:100%; display: table; table-layout: auto; text-align: center; border-collapse: separate; border-spacing: 2px;">               
+                  <colgroup>
+                    <col span="1" style="width: 33.33%;">
+                    <col span="1" style="width: 33.33%;">
+                    <col span="1" style="width: 33.33%;">
+                  </colgroup>
+                  <tr style="text-align: center;">
+                    <th style="width: 33.33%"class="actionItem">
+                        <a style="width: 33.33%" href="https://crossings.church/group-finder">
+                          <div>
+                            <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/bible_studies.png">
+                            <p style="font-size: 11px;">Find a Group</p>
+                          </div>
+                        </a>
+                      </th>
+                    <th style="width: 33.33%"class="actionItem">
+                        <a href="https://crossings.church/prayer/prayer-request">
+                          <div>
+                            <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/grow.png">
+                            <p style="font-size: 11px;">Prayer</p>
+                          </div>
+                        </a>
+                    </th>
+                    <th style="width: 33.33%"class="actionItem">
+                        <a href="https://crossings.church/give">
+                          <div>
+                            <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/giving.png">
+                            <p style="font-size: 11px;">Giving</p>
+                          </div>
+                        </a>
+                      </th>
+                  </tr>
+                  <!-- second row -->
+                  <tr style="text-align: center;">
+                    <td class="actionItem">
+                        <a href="https://crossings.church/worship">
+                          <div>
+                            <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/media.png">
+                            <p style="font-size: 11px;">Worship</p>
+                          </div>
+                        </a>
+                    </td>
+                    <td class="actionItem">
+                        <a href="https://crossings.church/info">
+                          <div>
+                            <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/info.png">
+                            <p style="font-size: 11px;">Info</p>
+                          </div>
+                        </a>
+                    </td>
+                    <td class="actionItem">
+                        <a href="https://crossings.church/locations/okc/serve/">
+                          <div>
+                            <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/volunteer.png">
+                            <p style="font-size: 11px;">Volunteer</p>
+                          </div>
+                        </a>
+                    </td>
+                  </tr>
+                </table>
+              </center>
                                             
                                             <!-- Connect With Us  -->
                                                 <div class="component component-divider" data-state="component">
-                                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 50px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
+                                                    <hr style="border: 0px; height: 2px; background-color: #CFCECE !important; margin-top: 40px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
                                                 </div>
                                                 <center>
                                                 <table align="center" class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: center; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
@@ -501,7 +605,7 @@
                                                 <!-- End Of Connect With Us  -->
 
                                                 <div class="component component-divider" data-state="component">
-                                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 20px; margin-bottom: 20px; background-position: initial initial; background-repeat: initial initial;">
+                                                    <hr style="border: 0px; height: 2px; background-color: #CFCECE !important; margin-top: 20px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
                                                 </div>
                                         </div>
                                     </div>
@@ -515,8 +619,8 @@
                 </tbody>
 	  	        </table>
               <!-- END CENTERED CONTAINER -->
+
               <!-- START FOOTER -->
-              <!-- Footer Social Links -->
 	  			    <table class="null" width="100%" >
 	  			    	<tbody>
                   <tr>
@@ -529,7 +633,7 @@
                                 <!-- insert image -->
                                 <!-- <img src="" alt=""> -->
                                 <a href="https://crossings.church">
-                                  <img align="center" style="max-width:100px;" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_vert.png">
+                                  <img align="center" style="width:100px;" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_vert.png">
                                 </a>
                                 <p style="margin-bottom: 0px; margin-top: 12px; text-decoration: none;"> <small>14600 N Portland Ave</small></p>
                                 <p style="margin-bottom: 0px; text-decoration: none;"> <small>Oklahoma City, OK 73134</small></p>
