@@ -495,7 +495,7 @@
                                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
                                                             </div>
                                           <div style="text-align: center;">
-                                            <a href="https://crossings.church"><button class="btn-primary" type="btn-primary" style="margin-top: 25px; margin-bottom: 30px; color:#F1F1F1">Learn More</a></button>
+                                            <a href="https://crossings.church"><button class="btn-primary" type="btn-primary" style="margin-top: 25px; margin-bottom: 30px; color:#F1F1F1;">Read Today's Devotion</a></button>
                                           </div>
 	  									                  </td>
 	  								                  </tr>
@@ -575,16 +575,34 @@
                                                     <tr>
                                                         <div class="connect-wrapper">
                                                             <div class="media-wrapper">
+                                                              	{% raw %}
+	  			    	  							                                {% assign personCampus =  Person | Campus | Property:'Name' %}
                                                                 <td class="media">
-                                                                  <a href="https://www.facebook.com/groups/2629291197293643" target="_blank">
+                                                                  {% if personCampus == 'Crossings OKC' %}
+                                                                  <a href="https://www.facebook.com/crossingsokc" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
                                                                     </a>
+                                                                  {% elseif personCampus == 'Crossings Edmond' %}
+                                                                    <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                                  </a>
+                                                                  {% endif %}
+                                                                  {% endraw %}
                                                                 </td>
+                                                                
+                                                                {% raw %}
+	  			    	  							                                {% assign personCampus =  Person | Campus | Property:'Name' %}
                                                                 <td class="media">
-                                                                  <a href="https://www.instagram.com/crossingsprison/?hl=en" target="_blank">
+                                                                  {% if personCampus == 'Crossings OKC' %}
+                                                                  <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                                    </a>
+                                                                  {% elseif personCampus == 'Crossings Edmond' %}
+                                                                  <a href="https://www.instagram.com/crossingsedmond" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
                                                                   </a>
-                                                                </td>
+                                                                  {% endif %}
+                                                                  {% endraw %}
                                                                 <td class="media">
                                                                   <a href="https://www.soundcloud.com/mycrossings" target="_blank">
                                                                     <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
@@ -656,7 +674,7 @@
                             <td align="center" style="padding: 12px;">
                               <center>
                                 <p> <small>Copyright © 2021 Crossings Community Church. All rights reserved.</small></p>
-                                <p> <small> You are receiving this email because you are subscribed to the email list. To manage your subscriptions, click <a style="color: black !important; font-weight: 600;"href="https://crossings.church/page/941">here.</a></small></p>
+                                [[ UnsubscribeOption ]]
                               </center>
                             </td>
                           </tr>
