@@ -490,7 +490,10 @@
 	  								                  <tr>
 	  									                  <td class="js-component-text-wrapper" style="padding-top: 20px;">
                                             <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component">
+                                              {% raw %}
+                                              {% assign personName =  Person | Property:'NickName' %}
                                                 <h2 style="text-align: center; margin-top: 10px;">Volunteer Opportunity</h2>
+	  										                        <p style="text-align: left; ">Hi {{ personName }},</p>
 	  										                        <p style="text-align: left; ">We've had the following volunteer opportunity come available. Is this something you would consider?</p>
 
                                                 <h3 style="text-align: center; margin: 30px 0px 5px 0px;">Whats Needed</h3>
@@ -502,6 +505,7 @@
                                                 <h3 style="text-align: center; margin: 30px 0px 5px 0px;">When</h3>
                                                 <p style="text-align: center; margin: 0px;">Date: {Insert Date}</p>
                                                 <p style="text-align: center;">Time: {Insert Date/Time}</p>
+                                              {% endraw %}
                                             </div>
                                             <div class="component component-divider" data-state="component">
                                               <hr style="border: 0px; height: 2px; background-color: #CFCECE !important; margin-top: 25px; margin-bottom: 25px; background-position: initial initial; background-repeat: initial initial;">
@@ -527,31 +531,49 @@
                                                     <tr>
                                                         <div class="connect-wrapper">
                                                             <div class="media-wrapper">
-                                                                <td class="media">
-                                                                  <a href="https://www.facebook.com/groups/2629291197293643" target="_blank">
-                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                                                                    </a>
-                                                                </td>
-                                                                <td class="media">
-                                                                  <a href="https://www.instagram.com/crossingsprison/?hl=en" target="_blank">
-                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                              {% raw %}
+                                                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                                              <td class="media">
+                                                                {% if personCampus == 'Crossings OKC' %}
+                                                                <a href="https://www.facebook.com/crossingsokc" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
                                                                   </a>
-                                                                </td>
-                                                                <td class="media">
-                                                                  <a href="https://www.soundcloud.com/mycrossings" target="_blank">
-                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
+                                                                {% elseif personCampus == 'Crossings Edmond' %}
+                                                                  <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                                </a>
+                                                                {% endif %}
+                                                                {% endraw %}
+                                                              </td>
+                                                              
+                                                              {% raw %}
+                                                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                                              <td class="media">
+                                                                {% if personCampus == 'Crossings OKC' %}
+                                                                <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
                                                                   </a>
-                                                                </td>
-                                                                <td class="media">
-                                                                  <a href="https://www.youtube.com/mycrossings" target="_blank">
-                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/youtube.png" width="34">
-                                                                  </a>
-                                                                </td>
-                                                                <td class="media">
-                                                                  <a href="https://crossings.church/worship" target="_blank">
-                                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_worship.png" width="34">
-                                                                  </a>
-                                                                </td>
+                                                                {% elseif personCampus == 'Crossings Edmond' %}
+                                                                <a href="https://www.instagram.com/crossingsedmond" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                                </a>
+                                                                {% endif %}
+                                                                {% endraw %}
+                                                              <td class="media">
+                                                                <a href="https://www.soundcloud.com/mycrossings" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
+                                                                </a>
+                                                              </td>
+                                                              <td class="media">
+                                                                <a href="https://www.youtube.com/mycrossings" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/youtube.png" width="34">
+                                                                </a>
+                                                              </td>
+                                                              <td class="media">
+                                                                <a href="https://crossings.church/worship" target="_blank">
+                                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_worship.png" width="34">
+                                                                </a>
+                                                              </td>
                                                             </div>
                                                         </div>
                                                     </tr>
