@@ -7,7 +7,7 @@
 
   <body class="">
     <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>40 Days of Prayer</title>
     <style>
       /* -------------------------------------
@@ -358,7 +358,7 @@
       }
     </style>
 
-    <span id="preheader-text" class="preheader">Crossings Community Churhc</span>
+    <span id="preheader-text" class="preheader">Crossings Community Church</span>
 
 
 
@@ -376,11 +376,11 @@
                     <td class="headerlogo">
                       <!-- HEADER LOGO -->
                       <div class="component component-image" data-state="component" data-image-width="" data-image-height="">
-                        <div style="display: flex; justify-content: center; align-items: center;">
+                        <div style="text-align: center">
                         <a href="https://crossings.church">
-                          <img id="template-logo" src="/GetImage.ashx?Id=410576" data-instructions="Provide a PNG with a transparent background." style="width: 100%; height: auto; display: flex; justify-content: center; align-items: center;" height="" width="" data-imgcsswidth="full" alt="">
+                          <img id="template-logo" align="center" src="/GetImage.ashx?Id=410576" data-instructions="Provide a PNG with a transparent background." style="height: auto;" height="" width="250" data-imgcsswidth="full" alt="">
                         </a>
-                        </div>
+                      </div>
                       </div>
                       <!-- HEADER LOGO END -->
                     </td>
@@ -403,60 +403,72 @@
 	  										                  <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
                                           <div style="text-align: center;">
-                                            <a><button style="margin-top:15px" type="btn-primary">Some text here</a></button>
+                                            <a><button type="btn-primary" style="padding: 6px">Some text here</a></button>
                                           </div>
 	  									                  </td>
 	  								                  </tr>
 	  							                  </tbody>
 	  						                  </table>
 	  					                    <div class="component component-divider" data-state="component">
-	  					                    	<hr style="border: 0px; height: 1px; background-color: rgb(196, 196, 196); margin-top: 30px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
+	  					                    	<hr style="border: 0px; height: 1px; background-color: rgb(196, 196, 196); margin-top: 50px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
 	  					                    </div>
 	  					                    <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
 	  					                    	<tbody>
-	  					                    		<tr>
-	  					                    			<td class="js-component-text-wrapper">
-                                          <p style="text-align: center; margin-top: -2x">
-                                              <strong>OKC: </strong> 405-755-2227 // <a href="mailto:info@crossings.church">info@crossings.church</a>
-                                          </p>
-                                          <p style="text-align: center; margin-top: -5x;">
-                                            <strong>EDMOND: </strong> 405-242-5460 // <a href="mailto:edmond@crossings.church">edmond@crossings.church</a>
-                                        </p>
-	  					                    			</td>
-                                      </tr>
-
                                       <tr>
                                         <td align="center">
-                                            <hr style="border: 0px; height: 1px; background-color: rgb(196, 196, 196); margin-top: 10px; background-position: initial initial; background-repeat: initial initial;">
                                           <center>
-
                                             <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
                                               <tbody><tr>
                                                 <td align="center" style="padding: 12px;">
                                                   <center>
-                                                    <a href="https://apps.apple.com/us/app/id719287381#?platform=appleTV" target="_blank">
-                                                      <img src="https://images.crossings.church/Images/Email%20template%20images/AppleTv_icon.png" style="display:block;" width="50" height="50">
+                                                    <a href="https://rock.crossings.church/page/941" target="_blank">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/Email/grow.png" style="display:block;" width="50" height="50">
                                                     </a>
                                                   </center>
                                                 </td>
+                                                {% raw %}
+                                                {% assign personCampus =  Person | Campus | Property:'Name' %}
                                                 <td align="center" style="padding: 12px;">
                                                   <center>
-                                                    <a href="https://channelstore.roku.com/details/59094aa15a1fd315ef75f87cb2fff067/crossings" target="_blank">
-                                                      <img src="https://images.crossings.church/Images/Email%20template%20images/Roku_icon.png" style="display:block;" width="50" height="50">
+                                                  {% if personCampus == 'Crossings OKC' %}
+                                                    <a href="https://www.facebook.com/crossingsokc" target="_blank">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" style="display:block;" width="50" height="50">
                                                     </a>
+                                                  {% elseif personCampus == 'Crossings Edmond' %}
+                                                    <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" style="display:block;" width="50" height="50">
+                                                    </a>
+                                                    {% endif %}
                                                   </center>
+                                                  {% endraw %}
+                                                </td>
+                                                {% raw %}
+                                                {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                                <td align="center" style="padding: 12px;">
+                                                  <center>
+                                                    {% if personCampus == 'Crossings OKC' %}
+                                                    <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" style="display:block;" width="50" height="50">
+                                                    </a>
+                                                    {% elseif personCampus == 'Crossings Edmond' %}
+                                                    <a href="https://www.instagram.com/crossingsedmond" target="_blank">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" style="display:block;" width="50" height="50">
+                                                    </a>
+                                                    {% endif %}
+                                                  </center>
+                                                  {% endraw %}
                                                 </td>
                                                 <td align="center" style="padding: 12px;">
                                                   <center>
                                                     <a href="https://crossings.church/worship" target="_blank">
-                                                      <img src="https://images.crossings.church/Images/Email%20template%20images/Worship_icon.png" style="display:block;" width="50" height="50">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_worship.png" style="display:block;" width="50" height="50">
                                                     </a>
                                                   </center>
                                                 </td>
                                                 <td align="center" style="padding: 12px;">
                                                   <center>
                                                     <a href="https://www.youtube.com/mycrossings" target="_blank">
-                                                      <img src="https://images.crossings.church/Images/Email%20template%20images/Youtube_icon.png" style="display:block;" width="50" height="50">
+                                                      <img src="https://crossingscommunitychurch.github.io/EmailAssets/youtube.png" style="display:block;" width="50" height="50">
                                                     </a>
                                                   </center>
                                                 </td>
@@ -486,59 +498,13 @@
 	  			    <table class="null" width="100%" style="background-color: #DCDCDC;">
 	  			    	<tbody>
                   <tr>
-	  			    	  	<td align="center">
-	  			    	  		<center>
-	  			    	  			<table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
-	  			    	  				<tbody><tr>
-	  			    	  					<td align="center" style="padding: 12px;">
-	  			    	  						<center>
-	  			    	  							{% raw %}
-	  			    	  							{% assign personCampus =  Person | Campus | Property:'Name' %}
-
-	  			    	  								{% if personCampus == 'Crossings OKC' %}
-	  			    	  								<a href="https://www.facebook.com/CrossingsOKC" target="_blank">
-	  			    	  									<img src="https://images.crossings.church/Images/Email%20template%20images/Social_App_facebook.png" style="display:block;" width="24" height="24">
-	  			    	  								</a>
-	  			    	  								{% elseif personCampus == 'Crossings Edmond' %}
-	  			    	  								<a href="https://www.facebook.com/CrossingsEdmond" target="_blank">
-	  			    	  									<img src="https://images.crossings.church/Images/Email%20template%20images/Social_App_facebook.png" style="display:block;" width="24" height="24">
-	  			    	  								</a>
-	  			    	  								
-	  			    	  								{% endif %}
-	  			    	  							{% endraw %}
-	  			    	  						</center>
-	  			    	  					</td>
-	  			    	  					<td align="center" style="padding: 12px;">
-	  			    	  						<center>
-	  			    	  							{% raw %}
-	  			    	  							{% assign personCampus =  Person | Campus | Property:'Name' %}
-
-	  			    	  								{% if personCampus == 'Crossings OKC' %}
-	  			    	  								<a href="https://www.instagram.com/crossingsokc" target="_blank">
-	  			    	  									<img src="https://images.crossings.church/Images/Email%20template%20images/Social_App_Instagram.png" style="display:block;" width="24" height="24">
-	  			    	  								</a>
-	  			    	  								{% elseif personCampus == 'Crossings Edmond' %}
-	  			    	  								<a href="https://www.instagram.com/CrossingsEdmond" target="_blank">
-	  			    	  									<img src="https://images.crossings.church/Images/Email%20template%20images/Social_App_Instagram.png" style="display:block;" width="24" height="24">
-	  			    	  								</a>
-	  			    	  								{% endif %}
-	  			    	  							{% endraw %}
-	  			    	  						</center>
-	  			    	  					</td>
-                          </tr>
-	  			    	  			</tbody>
-	  			    	  			</table>
-	  			    	  		</center>
-	  			    	  	</td>
-                  </tr>
-                  <tr>
                     <td>
                       <center>
                         <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
                           <tbody><tr>
                             <td align="center" style="padding: 12px;">
                               <center>
-                                <p> <small>Copyright © 2021 Crossings Community Church. All rights reserved.</small></p>
+                                <p> <small>Copyright <span>&#169;</span> 2021 Crossings Community Church. All rights reserved.</small></p>
                                 [[ UnsubscribeOption ]]
                               </center>
                             </td>
