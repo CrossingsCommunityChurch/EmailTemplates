@@ -541,17 +541,24 @@
                                                             {%-assign subheading = item | Attribute:'Subheading'-%}
                                                             {%-assign summary = item | Attribute:'SummaryText'-%}
                                                             {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
-                                                            {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
-                                                            {%-assign imageSize = '/fit-in/600x600'-%}
-                                                            {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath'-%}
-                                                            {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
+
+                                                            {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
+                                                            {%- if clPhoto and clPhoto != empty -%}
+                                                              {%- assign imageAsset = clPhoto -%}
+                                                            {%- else -%}
+                                                              {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
+                                                              {%-assign imageSize = ',c_scale,h_325'-%}
+                                                              {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath' | RemoveFirst:'/Images' | RemoveFirst:'/Web' | Prepend:'/oldweb' -%}
+                                                              {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
+                                                            {%- endif -%}
+                                                            
                                                             {%-if imageUrlPath == ''-%}
                                                               {%-assign imageAsset = ''-%}
                                                             {%-endif-%}
                                                         <div class="card-wrapper">
                                                         	<div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
                                                             <a href={{detailsURL | StripHtml}} target="_blank">
-                                                              <img class="card-image" src={{imageAsset | ToJSON}} style="width: 100%;" data-imgcsswidth="full" alt="">
+                                                              <img class="card-image cld-hidpi" src={{imageAsset}} style="width: 100%;" data-imgcsswidth="full" alt="">
                                                             </a>
                                                           </div>
                                                             <span style="width:10%"></span>
