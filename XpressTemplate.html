@@ -312,6 +312,10 @@
         text-align: center;
     }
 
+    .card-wrapper a {
+      text-decoration: none;
+    }
+
     .card-image {
         width: 100%;
         border-radius: 10px 10px 0px 0px;
@@ -551,25 +555,23 @@
                                                               {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath' | RemoveFirst:'/Images' | RemoveFirst:'/Web' | Prepend:'/oldweb' -%}
                                                               {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
                                                             {%- endif -%}
-                                                            
+
                                                             {%-if imageUrlPath == ''-%}
                                                               {%-assign imageAsset = ''-%}
                                                             {%-endif-%}
                                                         <div class="card-wrapper">
+                                                          <a href={{detailsURL | StripHtml}} target="_blank">
                                                         	<div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
-                                                            <a href={{detailsURL | StripHtml}} target="_blank">
                                                               <img class="card-image cld-hidpi" src={{imageAsset}} style="width: 100%;" data-imgcsswidth="full" alt="">
-                                                            </a>
-                                                          </div>
-                                                            <span style="width:10%"></span>
-                                                            <div class="card-info">
-                                                                <h3 style="margin: 20px 0px 10px 0px; text-align: center;">{{ item.Title }}</h4>
-                                                                <h5 style="margin-bottom: 5px;">{{ subheading }}</h5>
-                                                                <p>{{ summary }}</p>
-
-
                                                             </div>
                                                             <span style="width:10%"></span>
+                                                            <div class="card-info">
+                                                              <h3 style="margin: 20px 0px 10px 0px; text-align: center;">{{ item.Title }}</h4>
+                                                                <h5 style="margin-bottom: 5px;">{{ subheading }}</h5>
+                                                                <p>{{ summary }}</p>
+                                                            </div>
+                                                            <span style="width:10%"></span>
+                                                          </a>
                                                         </div>
                                                                 {%-endif-%}
                                                         {%- endfor -%}
