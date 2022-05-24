@@ -561,7 +561,7 @@
                                                             {%-assign subheading = item | Attribute:'Subheading'-%}
                                                             {%-assign summary = item | Attribute:'SummaryText'-%}
                                                             {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
-                                                            <!-- {%-assign DayofWeek = item | Attribute: 'dayOfWeek'-%} -->
+                                                            {%-assign DayofWeek = item | Attribute: 'dayoftheweek'-%}
 
                                                             {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
                                                             {%- if clPhoto and clPhoto != empty -%}
@@ -583,7 +583,7 @@
                                                             </div>
                                                             <span style="width:10%"></span>
                                                             <div class="card-info" style="position: relative;">
-                                                              <h4 class="day-of-week">{{item.DayofWeek}}</h4>
+                                                              <h4 class="day-of-week">{{DayofWeek}}</h4>
                                                               <h3 style="margin: 20px 0px 10px 0px; text-align: center;">{{ item.Title }}</h3>
                                                                 <h5 style="margin-bottom: 5px;">{{ subheading }}</h5>
                                                                 <p>{{ summary }}</p>
