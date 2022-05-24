@@ -295,22 +295,17 @@
       }
 
       .day-of-week {
-        position: absolute;
-        top: -1rem;
-        left: 0;
-        right: 0;
-      }
-
-      .day-of-week span {
-          display: inline-block;
-          margin: auto;
-          background-color: #888;
-          border-radius: 15px;
-          padding: 0.25rem 1rem;
-          font-size: 0.8rem;
-          border: 3px solid #fff;
-          color: #fff;
-          font-weight: bold;
+        background-color: #888;
+        border-radius: 15px;
+        padding: 0.25rem 1rem;
+        font-size: 0.8rem;
+        border: 3px solid #fff;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+        width: 25%;
+        /* display: inline-block; */
       }
 
         /* -------------------------------------
@@ -564,6 +559,13 @@
                                                             {%-assign summary = item | Attribute:'SummaryText'-%}
                                                             {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
                                                             {%-assign DayofWeek = item | Attribute: 'dayoftheweek'-%}
+                                                            {%-assign Dash = " - " -%}
+
+                                                            {%- if DayofWeek != empty -%}
+                                                              {%-assign subInfo = {{subheading}} + {{Dash}} + {{DayofWeek}} -%}
+                                                            {%- else -%}
+                                                              {%-assign subInfo = {{subheading}} -%}
+                                                            {%- endif -%}
 
                                                             {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
                                                             {%- if clPhoto and clPhoto != empty -%}
@@ -585,13 +587,11 @@
                                                             </div>
                                                             <span style="width:10%"></span>
                                                             <div class="card-info">
-                                                              <!-- {%- if DayofWeek != empty -%} -->
-                                                              <div class="day-of-week">
-                                                                <span>{{DayofWeek}}</span>
-                                                              </div>
-                                                              <!-- {%-endif-%} -->
                                                               <h3 style="margin: 20px 0px 10px 0px; text-align: center;">{{ item.Title }}</h3>
-                                                                <h5 style="margin-bottom: 5px;">{{ subheading }}</h5>
+                                                              {%- if DayofWeek != empty -%}
+                                                                <h4 class="day-of-week">{{DayofWeek}}</h4>
+                                                              {%-endif-%}
+                                                                <h5 style="margin-bottom: 5px;">{{ subInfo }}</h5>
                                                                 <p>{{ summary }}</p>
                                                             </div>
                                                             <span style="width:10%"></span>
