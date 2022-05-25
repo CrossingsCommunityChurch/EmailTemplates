@@ -532,29 +532,29 @@
                                                 <tbody>
                                                     <tr>
                                                         {%- assign currentDate = 'Now' | Date  -%} 
-                                                        {%- contentchannelitem where:'ContentChannelId == 1' iterator:'items' sort:'Priority desc' -%}
+                                                        {%- contentchannelitem where:'ContentChannelId == 516' iterator:'items' sort:'Priority desc' -%}
                                                         {%- for item in items -%}
                                                         {%- if item.StartDateTime >= currentDate -%}
-                                                            {%- continue -%}
-                                                            {%- endif -%}
-                                                            {%- if item.ExpireDateTime <= currentDate -%}
-                                                            {%- continue -%}
-                                                            {%-endif-%}
-                                                            {%- assign ShouldInclude = item | Attribute:'IncludeInXpress'-%}
-                                                            {%- if ShouldInclude and ShouldInclude != empty -%}
-                                                            {%-assign subheading = item | Attribute:'Subheading'-%}
-                                                            {%-assign summary = item | Attribute:'SummaryText'-%}
-                                                            {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
-
-                                                            {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
-                                                            {%- if clPhoto and clPhoto != empty -%}
-                                                              {%- assign imageAsset = clPhoto -%}
-                                                            {%- else -%}
-                                                              {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
-                                                              {%-assign imageSize = ',c_scale,h_325'-%}
-                                                              {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath' | RemoveFirst:'/Images' | RemoveFirst:'/Web' | Prepend:'/oldweb' -%}
-                                                              {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
-                                                            {%- endif -%}
+                                                          {%- continue -%}
+                                                        {%- endif -%}
+                                                        {%- if item.ExpireDateTime <= currentDate -%}
+                                                          {%- continue -%}
+                                                        {%-endif-%}
+                                                        {%- assign ShouldInclude = item | Attribute:'IncludeInStudentEmail'-%}
+                                                        {%- if ShouldInclude == "High School" -%}
+                                                          {%-assign subheading = item | Attribute:'Subheading'-%}
+                                                          {%-assign summary = item | Attribute:'SummaryText'-%}
+                                                          {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
+                                                          {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
+                                                          
+                                                          {%- if clPhoto and clPhoto != empty -%}
+                                                            {%- assign imageAsset = clPhoto -%}
+                                                          {%- else -%}
+                                                            {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
+                                                            {%-assign imageSize = ',c_scale,h_325'-%}
+                                                            {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath' | RemoveFirst:'/Images' | RemoveFirst:'/Web' | Prepend:'/oldweb' -%}
+                                                            {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
+                                                          {%- endif -%}
 
                                                             {%-if imageUrlPath == ''-%}
                                                               {%-assign imageAsset = ''-%}
@@ -573,7 +573,7 @@
                                                             <span style="width:10%"></span>
                                                           </a>
                                                         </div>
-                                                                {%-endif-%}
+                                                        {%-endif-%}
                                                         {%- endfor -%}
                                                         {%- endcontentchannelitem -%}
                                                     </tr>
