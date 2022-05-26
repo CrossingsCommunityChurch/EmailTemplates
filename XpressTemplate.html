@@ -566,8 +566,8 @@
                                                             </div>
                                                             <span style="width:10%"></span>
                                                             <div class="card-info">
-                                                              <h3 style="margin: 20px 0px 10px 0px; text-align: center;">{{ item.Title }}</h3>
-                                                                <h5 style="margin-bottom: 5px;">{{ subheading}}
+                                                              <h3 style="margin: 20px 0px 10px 0px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h3>
+                                                                <h5 style="margin-bottom: 5px; text-align: center; padding-bottom: 10px;">{{subheading | Replace:'•', '-'}}
                                                                   {%-if DayofWeek != empty-%}
                                                                      - {{DayofWeek}}
                                                                   {%-endif-%}
