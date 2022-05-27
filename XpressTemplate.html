@@ -540,7 +540,7 @@
                                                             {%- continue -%}
                                                             {%-endif-%}
                                                             {%- assign ShouldInclude = item | Attribute:'IncludeInXpress'-%}
-                                                            {%- if ShouldInclude and ShouldInclude != empty -%}
+                                                            {%- if ShouldInclude == "Yes" -%}
                                                             {%-assign subheading = item | Attribute:'Subheading'-%}
                                                             {%-assign summary = item | Attribute:'SummaryText'-%}
                                                             {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
@@ -566,10 +566,10 @@
                                                             </div>
                                                             <span style="width:10%"></span>
                                                             <div class="card-info">
-                                                              <h3 style="margin: 20px 0px 10px 0px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h3>
+                                                              <h3 style="margin-bottom: 5px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h3>
                                                                 <h5 style="margin-bottom: 5px; text-align: center; padding-bottom: 10px;">{{subheading | Replace:'•', '-'}}
                                                                   {%-if DayofWeek != empty-%}
-                                                                     - {{DayofWeek}}
+                                                                  - {{DayofWeek}}
                                                                   {%-endif-%}
                                                                 </h5>
                                                                 <p>{{ summary }}</p>
