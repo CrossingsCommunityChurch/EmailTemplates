@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- NEED RESOURCE CARDS? NEED TO CHANGE THEIR LINKS? -->
 <html>
 	<head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -492,7 +493,7 @@
                     <tr>
                         <td class="app-header">
                           <a href="https://crossings.church">
-                            <img class= "crossingsLogo" align="center" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_vert.png" width="150">
+                            <img class= "crossingsLogo" align="center" src="https://crossingscommunitychurch.github.io/EmailAssets/Students_HS_logo_LightGray.png" width="150">
                           </a>
                         </td>
                     </tr>
@@ -514,71 +515,113 @@
 	  							                  <tbody>
 	  								                  <tr>
 	  									                  <td class="js-component-text-wrapper" style="padding-top: 20px;">
-                                                            <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component">
-                                                                <h2 style="text-align: center; margin-top: 10px;">Email Title</h2>
-	  										                                        <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
-                                                            </div>
-                                          <div style="text-align: center;">
-                                            <a href="https://crossings.church"><button class="btn-primary" type="btn-primary" style="margin-top: 25px; margin-bottom: 20px; color:#F1F1F1">Learn More</a></button>
+                                          <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component">
+                                              <h2 style="text-align: center; margin-top: 10px;">Email Title</h2>
+                                              <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
+                                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
+                                          </div>
+                                          <div class="structure-dropzone" style="margin-bottom: 25px;">
+                                            <div class="dropzone">
+                                              <div class="component component-button v2" data-state="component">
+                                                <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td valign="top" align="center" class="button-innerwrap">
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
+                                                          <tbody>
+                                                            <tr>
+                                                              <td align="center" valign="middle" class="button-content" style="">
+                                                                <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="structure-dropzone" style="margin-bottom: 25px;">
+                                            <div class="dropzone">
+                                              <div class="component component-button v2" data-state="component">
+                                                <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td valign="top" align="center" class="button-innerwrap">
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
+                                                          <tbody>
+                                                            <tr>
+                                                              <td align="center" valign="middle" class="button-content" style="">
+                                                                <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </div>
                                           </div>
 	  									                  </td>
 	  								                  </tr>
 	  							                  </tbody>
 	  						                  </table>
+                                  <!-- Event Cards -->
+                                  <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
+                                      <tbody>
+                                          <tr>
+                                              {%- assign currentDate = 'Now' | Date  -%} 
+                                              {%- contentchannelitem where:'ContentChannelId == 516' iterator:'items' sort:'Priority desc' -%}
+                                              {%- for item in items -%}
+                                              {%- if item.StartDateTime >= currentDate -%}
+                                                {%- continue -%}
+                                              {%- endif -%}
+                                              {%- if item.ExpireDateTime <= currentDate -%}
+                                                {%- continue -%}
+                                              {%-endif-%}
+                                              {%- assign ShouldInclude = item | Attribute:'IncludeInStudentEmail'-%}
+                                              {%- if ShouldInclude == "High School" -%}
+                                                {%-assign subheading = item | Attribute:'Subheading'-%}
+                                                {%-assign summary = item | Attribute:'SummaryText'-%}
+                                                {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
+                                                {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
+                                                
+                                                {%- if clPhoto and clPhoto != empty -%}
+                                                  {%- assign imageAsset = clPhoto -%}
+                                                {%- else -%}
+                                                  {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
+                                                  {%-assign imageSize = ',c_scale,h_325'-%}
+                                                  {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath' | RemoveFirst:'/Images' | RemoveFirst:'/Web' | Prepend:'/oldweb' -%}
+                                                  {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
+                                                {%- endif -%}
 
-                                            <!-- Event Cards -->
-                                            <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
-                                                <tbody>
-                                                    <tr>
-                                                        {%- assign currentDate = 'Now' | Date  -%} 
-                                                        {%- contentchannelitem where:'ContentChannelId == 516' iterator:'items' sort:'Priority desc' -%}
-                                                        {%- for item in items -%}
-                                                        {%- if item.StartDateTime >= currentDate -%}
-                                                          {%- continue -%}
-                                                        {%- endif -%}
-                                                        {%- if item.ExpireDateTime <= currentDate -%}
-                                                          {%- continue -%}
-                                                        {%-endif-%}
-                                                        {%- assign ShouldInclude = item | Attribute:'IncludeInStudentEmail'-%}
-                                                        {%- if ShouldInclude == "High School" -%}
-                                                          {%-assign subheading = item | Attribute:'Subheading'-%}
-                                                          {%-assign summary = item | Attribute:'SummaryText'-%}
-                                                          {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
-                                                          {% assign clPhoto = item | Attribute:'FeatureImage','Object' | CloudinaryTransform:'c_scale,w_auto,dpr_auto,f_auto,q_auto' %}
-                                                          
-                                                          {%- if clPhoto and clPhoto != empty -%}
-                                                            {%- assign imageAsset = clPhoto -%}
-                                                          {%- else -%}
-                                                            {%-assign imageStorageUrl = 'Global' | Attribute:'ImageURL' | Prepend:'https://'-%}
-                                                            {%-assign imageSize = ',c_scale,h_325'-%}
-                                                            {%-assign imageUrlPath = item | Attribute:'AssetImage' | Url:'localpath' | RemoveFirst:'/Images' | RemoveFirst:'/Web' | Prepend:'/oldweb' -%}
-                                                            {%-assign imageAsset = imageStorageUrl | Append: imageSize | Append:imageUrlPath-%}
-                                                          {%- endif -%}
-
-                                                            {%-if imageUrlPath == ''-%}
-                                                              {%-assign imageAsset = ''-%}
-                                                            {%-endif-%}
-                                                        <div class="card-wrapper">
-                                                          <a href={{detailsURL | StripHtml}} target="_blank">
-                                                        	<div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
-                                                              <img class="card-image cld-hidpi" src={{imageAsset}} style="width: 100%;" data-imgcsswidth="full" alt="">
-                                                            </div>
-                                                            <span style="width:10%"></span>
-                                                            <div class="card-info">
-                                                              <h3 style="margin: 20px 0px 10px 0px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h4>
-                                                                <h5 style="margin-bottom: 5px; text-align: center; padding-bottom: 10px;">{{ subheading }}</h5>
-                                                                <p>{{ summary }}</p>
-                                                            </div>
-                                                            <span style="width:10%"></span>
-                                                          </a>
-                                                        </div>
-                                                        {%-endif-%}
-                                                        {%- endfor -%}
-                                                        {%- endcontentchannelitem -%}
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                  {%-if imageUrlPath == ''-%}
+                                                    {%-assign imageAsset = ''-%}
+                                                  {%-endif-%}
+                                              <div class="card-wrapper">
+                                                <a href={{detailsURL | StripHtml}} target="_blank">
+                                                <div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
+                                                    <img class="card-image cld-hidpi" src={{imageAsset}} style="width: 100%;" data-imgcsswidth="full" alt="">
+                                                  </div>
+                                                  <span style="width:10%"></span>
+                                                  <div class="card-info">
+                                                    <h3 style="margin: 20px 0px 10px 0px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h4>
+                                                      <h5 style="margin-bottom: 5px; text-align: center; padding-bottom: 10px;">{{ subheading }}</h5>
+                                                      <p>{{ summary }}</p>
+                                                  </div>
+                                                  <span style="width:10%"></span>
+                                                </a>
+                                              </div>
+                                              {%-endif-%}
+                                              {%- endfor -%}
+                                              {%- endcontentchannelitem -%}
+                                          </tr>
+                                      </tbody>
+                                  </table>
 
             <!-- Resource Cards -->
               <center>
