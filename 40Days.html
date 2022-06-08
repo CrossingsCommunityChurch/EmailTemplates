@@ -173,6 +173,7 @@
       }
 
       /* -------------------------------------
+      /* -------------------------------------
           BUTTONS
       ------------------------------------- */
       .btn {
@@ -184,16 +185,16 @@
           width: auto;
       }
         .btn table td {
-          background-color: #ffffff;
+          /* background-color: #F1F1F1 !important; */
           border-radius: 5px;
           text-align: center;
       }
         .btn a {
-          background-color: #ffffff;
-          border: solid 1px #3498db;
+          background-color: #838282 !important; 
+          border: solid 1px #F1F1F1 !important;
           border-radius: 5px;
           box-sizing: border-box;
-          color: #3498db;
+          color: #F1F1F1 !important;
           cursor: pointer;
           display: inline-block;
           font-size: 14px;
@@ -204,14 +205,24 @@
           text-transform: capitalize;
       }
 
+      .btn-primary {
+          background-color: #838282 !important;
+          border-radius: 30px;
+          padding: 1.3em;
+          text-decoration: none;
+          border: 2px solid #838282;
+          padding: 15px 40px 15px 40px;
+          font-size: 16px;
+      }
+
       .btn-primary table td {
-        background-color: #3498db;
+        background-color: #F1F1F1 !important;
       }
 
       .btn-primary a {
-        background-color: #3498db;
-        border-color: #3498db;
-        color: #ffffff;
+        background-color: #838282 !important;
+        border-color: #F1F1F1 !important;
+        color:#F1F1F1;
       }
 
       /* -------------------------------------
@@ -360,8 +371,6 @@
 
     <span id="preheader-text" class="preheader">Crossings Community Church</span>
 
-
-
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tbody>
 	  	  <tr>
@@ -402,13 +411,33 @@
 	  										                  <h2 style="text-align: center;">Title</h2>
 	  										                  <p style="text-align: left; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.</p>
-                                          <div style="text-align: center;">
-                                            <a><button type="btn-primary" style="padding: 6px">Some text here</a></button>
-                                          </div>
-	  									                  </td>
-	  								                  </tr>
-	  							                  </tbody>
-	  						                  </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="structure-dropzone" style="margin-bottom: 25px;">
+                                      <div class="dropzone">
+                                        <div class="component component-button v2" data-state="component">
+                                          <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
+                                            <tbody>
+                                              <tr>
+                                                <td valign="top" align="center" class="button-innerwrap">
+                                                  <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td align="center" valign="middle" class="button-content">
+                                                          <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
 	  					                    <div class="component component-divider" data-state="component">
 	  					                    	<hr style="border: 0px; height: 1px; background-color: rgb(196, 196, 196); margin-top: 50px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
 	  					                    </div>
