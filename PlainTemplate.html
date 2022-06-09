@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- REFORMAT ADDRESS -->
+<!-- COPIED TO PRODUCTION -->
 <html>
 	<head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -606,31 +606,49 @@
                                       <tr>
                                         <div class="connect-wrapper">
                                           <div class="media-wrapper">
-                                            <td class="media">
-                                              <a href="https://www.facebook.com/groups/2629291197293643" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                                              </a>
-                                            </td>
-                                            <td class="media">
-                                              <a href="https://www.instagram.com/crossingsprison/?hl=en" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                                              </a>
-                                            </td>
-                                            <td class="media">
-                                              <a href="https://www.soundcloud.com/mycrossings" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
-                                              </a>
-                                            </td>
-                                            <td class="media">
-                                              <a href="https://www.youtube.com/mycrossings" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/youtube.png" width="34">
-                                              </a>
-                                            </td>
-                                            <td class="media">
-                                              <a href="https://crossings.church/worship" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_worship.png" width="34">
-                                              </a>
-                                            </td>
+                                            {% raw %}
+                                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                              <td class="media">
+                                                {% if personCampus == 'Crossings OKC' %}
+                                                  <a href="https://www.facebook.com/crossingsokc" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                  </a>
+                                                {% elseif personCampus == 'Crossings Edmond' %}
+                                                  <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                  </a>
+                                                {% endif %}
+                                            {% endraw %}
+                                              </td>
+                                            {% raw %}
+                                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                              <td class="media">
+                                                {% if personCampus == 'Crossings OKC' %}
+                                                  <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                  </a>
+                                                {% elseif personCampus == 'Crossings Edmond' %}
+                                                  <a href="https://www.instagram.com/crossingsedmond" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                  </a>
+                                                {% endif %}
+                                            {% endraw %}
+                                              </td>
+                                              <td class="media">
+                                                <a href="https://www.soundcloud.com/mycrossings" target="_blank">
+                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
+                                                </a>
+                                              </td>
+                                              <td class="media">
+                                                <a href="https://www.youtube.com/mycrossings" target="_blank">
+                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/youtube.png" width="34">
+                                                </a>
+                                              </td>
+                                              <td class="media">
+                                                <a href="https://crossings.church/worship" target="_blank">
+                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_worship.png" width="34">
+                                                </a>
+                                              </td>
                                           </div>
                                         </div>
                                       </tr>
@@ -668,15 +686,19 @@
                                   <a href="https://crossings.church">
                                     <img align="center" style="width:100px;" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_vert.png">
                                   </a>
-                                  <p style="margin-bottom: 0px; margin-top: 12px; text-decoration: none;">
-                                    <small>
-                                      14600 N Portland Ave
-                                    </small>
+                                  <p style="margin-bottom: 0px; margin-top: 12px;">
+                                    <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
+                                      <small>
+                                        14600 N Portland Ave
+                                      </small>
+                                    </a>
                                   </p>
-                                  <p style="margin-bottom: 0px; text-decoration: none;">
-                                    <small>
-                                      Oklahoma City, OK 73134
-                                    </small>
+                                  <p style="margin-bottom: 0px;">
+                                    <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
+                                      <small>
+                                        Oklahoma City, OK 73134
+                                      </small>
+                                    </a>
                                   </p>
                                 </center>
                               </td>
