@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOCIALS? RESOURCE CARDS?-->
+<!-- HEADER? ANCHOR TO BOOK ON WESLEYAN PAGE FOR THIRD RESOURCE CARD (BOOK LINK)-->
 <html>
 	<head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -522,26 +522,26 @@
                                       </colgroup>
                                       <tr style="text-align: center;">
                                         <th style="width: 33.33%"class="actionItem">
-                                          <a style="width: 33.33%" href="https://www.martygrubbs.com/blog">
+                                          <a style="width: 33.33%" href="https://crossings.church/wesleyan">
                                             <div>
                                               <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/readings.png">
-                                              <p style="font-size: 11px;">Latest Blog</p>
+                                              <p style="font-size: 11px;">Learn More</p>
                                             </div>
                                           </a>
                                         </th>
                                         <th style="width: 33.33%"class="actionItem">
-                                          <a href="https://www.martygrubbs.com/restored">
+                                          <a href="https://crossings.church/wesleyan">
                                             <div>
                                               <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/bible_studies.png">
-                                              <p style="font-size: 11px;">Restored</p>
+                                              <p style="font-size: 11px;">Contact Us</p>
                                             </div>
                                           </a>
                                         </th>
                                         <th style="width: 33.33%"class="actionItem">
-                                          <a href="https://www.martygrubbs.com/about">
+                                          <a href="https:/crossings.church/wesleyan/#book">
                                             <div>
                                               <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/giving.png">
-                                              <p style="font-size: 11px;">About</p>
+                                              <p style="font-size: 11px;">Book Link</p>
                                             </div>
                                           </a>
                                         </th>
@@ -557,16 +557,49 @@
                                       <tr>
                                         <div class="connect-wrapper">
                                           <div class="media-wrapper">
-                                            <td class="media">
-                                              <a href="https://www.facebook.com/profile.php?id=100008045131205" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                                              </a>
-                                            </td>
-                                            <td class="media">
-                                              <a href="https://twitter.com/MartyGrubbs" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/twitter.png" width="34">
-                                              </a>
-                                            </td>
+                                            {% raw %}
+                                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                              <td class="media">
+                                                {% if personCampus == 'Crossings Edmond' %}
+                                                  <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                  </a>
+                                                {% else %}
+                                                  <a href="https://www.facebook.com/crossingsokc" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                                                  </a>
+                                                {% endif %}
+                                            {% endraw %}
+                                              </td>
+                                            {% raw %}
+                                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                                              <td class="media">
+                                                {% if personCampus == 'Crossings Edmond' %}
+                                                  <a href="https://www.instagram.com/crossingsedmond" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                  </a>
+                                                {% else %}
+                                                  <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                                                    <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                                                  </a>
+                                                {% endif %}
+                                            {% endraw %}
+                                              </td>
+                                              <td class="media">
+                                                <a href="https://www.soundcloud.com/mycrossings" target="_blank">
+                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/soundcloud.png" width="34">
+                                                </a>
+                                              </td>
+                                              <td class="media">
+                                                <a href="https://www.youtube.com/mycrossings" target="_blank">
+                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/youtube.png" width="34">
+                                                </a>
+                                              </td>
+                                              <td class="media">
+                                                <a href="https://crossings.church/worship" target="_blank">
+                                                  <img src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_worship.png" width="34">
+                                                </a>
+                                              </td>
                                           </div>
                                         </div>
                                       </tr>
@@ -578,10 +611,10 @@
                                   </div>
                                 </div>
                               </div>
-	  						</td>
+	  						            </td>
                           </tr>
                         </tbody>
-	  			      </table>
+	  			            </table>
                     </td>
                   </tr>
                   <!-- END MAIN CONTENT AREA -->
