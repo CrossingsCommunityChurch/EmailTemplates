@@ -581,7 +581,7 @@
                                               {%- continue -%}
                                             {%-endif-%}
                                             {%- assign studentContent = item | Attribute:'IncludeInStudentEmail'-%}
-                                            {%- if studentContent == "Middle School" -%}
+                                            {%- if studentContent contains "Middle School" -%}
                                               {%-assign subheading = item | Attribute:'Subheading'-%}
                                               {%-assign summary = item | Attribute:'SummaryText'-%}
                                               {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
