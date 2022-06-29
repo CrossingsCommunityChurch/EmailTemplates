@@ -572,7 +572,7 @@
                                     <tbody>
                                       <tr>
                                         {%- assign currentDate = 'Now' | Date  -%} 
-                                        {%- contentchannelitem where:'ContentChannelId == 516' iterator:'items' sort:'Priority desc' -%}
+                                        {%- contentchannelitem where:'ContentChannelId == 516 || ContentChannelId == 1' iterator:'items' sort:'Priority desc' -%}
                                           {%- for item in items -%}
                                             {%- if item.StartDateTime >= currentDate -%}
                                               {%- continue -%}
@@ -580,8 +580,8 @@
                                             {%- if item.ExpireDateTime <= currentDate -%}
                                               {%- continue -%}
                                             {%-endif-%}
-                                            {%- assign ShouldInclude = item | Attribute:'IncludeInStudentEmail'-%}
-                                            {%- if ShouldInclude == "Middle School" -%}
+                                            {%- assign studentContent = item | Attribute:'IncludeInStudentEmail'-%}
+                                            {%- if studentContent == "Middle School" -%}
                                               {%-assign subheading = item | Attribute:'Subheading'-%}
                                               {%-assign summary = item | Attribute:'SummaryText'-%}
                                               {%-assign detailsURL = item | Attribute: 'DetailsURL'-%}
