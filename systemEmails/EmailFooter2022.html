@@ -1,0 +1,101 @@
+<html>
+  <body>
+    <!-- START FOOTER -->
+    <table class="null" width="100%" >
+      <tbody>
+        <tr>
+          <td>
+            <center>
+              <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
+                <tbody>
+                  <tr>
+                    <td align="center" style="padding: 0px">
+                      <center>
+                        <!-- insert image -->
+                        <!-- <img src="" alt=""> -->
+                        <a href="https://crossings.church">
+                          <img align="center" style="width:150px;" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_lt.png">
+                        </a>
+                        <p style="margin-bottom: 0px; margin-top: 12px;">
+                          <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
+                            {% raw %}
+                              {% assign personCampus =  Person | Campus | Property:'Name' %}
+                              {% if personCampus == 'Crossings Edmond' %}
+                                <small>1500 W Covell Rd<br>Edmond, OK 73003</small>
+                              {% else %}
+                                <small>14600 N Portland Ave<br>Oklahoma City, OK 73134</small>
+                              {% endif %}
+                            {% endraw %}
+                          </a>
+                        </p>
+                      </center>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center>
+              <table align="center" class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: center; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
+                <tr>
+                  <div class="connect-wrapper">
+                    <div class="media-wrapper">
+                      {% raw %}
+                        {% assign personCampus =  Person | Campus | Property:'Name' %}
+                        <td class="media">
+                          {% if personCampus == 'Crossings Edmond' %}
+                            <a href="https://www.facebook.com/crossingsedmond" target="_blank">
+                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                            </a>
+                          {% else %}
+                            <a href="https://www.facebook.com/crossingsokc" target="_blank">
+                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+                            </a>
+                          {% endif %}
+                      {% endraw %}
+                        </td>
+                      {% raw %}
+                        {% assign personCampus =  Person | Campus | Property:'Name' %}
+                        <td class="media">
+                          {% if personCampus == 'Crossings Edmond' %}
+                            <a href="https://www.instagram.com/crossingsedmond" target="_blank">
+                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                            </a>
+                          {% else %}
+                            <a href="https://www.instagram.com/crossingsokc" target="_blank">
+                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+                            </a>
+                          {% endif %}
+                      {% endraw %}
+                        </td>
+                    </div>
+                  </div>
+                </tr>
+              </table>
+            </center>
+            <center>
+              <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
+                <tbody>
+                  <tr>
+                    <td align="center" style="padding: 12px;">
+                      <center>
+                        <p>
+                          <small>405-755-2227<br>crossings.church<br><a href="https://crossings.church/contact-us">Contact Us</a></small>
+                        </p>
+                        [[ UnsubscribeOption ]]
+                      </center>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- END FOOTER -->
+  </body>
+</html>
