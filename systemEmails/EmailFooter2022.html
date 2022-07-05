@@ -6,7 +6,7 @@
         <tr>
           <td>
             <center>
-              <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
+              <table border="0" cellspacing="0" style="width: auto;">
                 <tbody>
                   <tr>
                     <td align="center" style="padding: 0px">
@@ -16,38 +16,10 @@
                         <a href="https://crossings.church">
                           <img align="center" style="width:150px;" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_lt.png">
                         </a>
-                        <!-- <p style="margin-bottom: 0px; margin-top: 12px;">
-                          <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
-                            {% raw %}
-                              {% assign personCampus =  Person | Campus | Property:'Name' %}
-                              {% if personCampus == 'Crossings Edmond' %}
-                                <small>1500 W Covell Rd<br>Edmond, OK 73003</small>
-                              {% else %}
-                                <small>14600 N Portland Ave<br>Oklahoma City, OK 73134</small>
-                              {% endif %}
-                            {% endraw %}
-                          </a>
-                        </p> -->
                         {{ 'Global' | Attribute:'EmailFooterAddress' }}
-                      </center>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </center>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <center>
-              <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
-                <tbody>
-                  <tr>
-                    <td align="center" style="padding: 12px;">
-                      <center>
-                        <p>
-                          <small>405-755-2227<br>crossings.church<br><a href="https://crossings.church/contact-us">Contact Us</a></small>
-                        </p>
+                        <div style="line-height: 1.0; padding-top: 10px;">
+                          <small >405-755-2227<br>crossings.church<br><a href="https://crossings.church/contact-us">Contact Us</a></small>
+                        </div>
                       </center>
                     </td>
                   </tr>
@@ -57,43 +29,7 @@
             <center>
               <table align="center" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: center; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
                 <tr>
-                  <div class="connect-wrapper">
-                    <div class="media-wrapper">
-                      <!-- {% raw %}
-                        {% if Person != empty %}
-                          {% assign personCampus =  Person | Campus | Property:'Name' %}
-                        {% endif %}
-                        <td class="media">
-                          {% if personCampus == 'Crossings Edmond' %}
-                            <a href="https://www.facebook.com/crossingsedmond" target="_blank">
-                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                            </a>
-                          {% else %}
-                            <a href="https://www.facebook.com/crossingsokc" target="_blank">
-                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                            </a>
-                          {% endif %}
-                        </td>
-                      {% endraw %}
-                      {% raw %}
-                        {% if Person != empty %}
-                          {% assign personCampus =  Person | Campus | Property:'Name' %}
-                        {% endif %}
-                        <td class="media">
-                          {% if personCampus == 'Crossings Edmond' %}
-                            <a href="https://www.instagram.com/crossingsedmond" target="_blank">
-                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                            </a>
-                          {% else %}
-                            <a href="https://www.instagram.com/crossingsokc" target="_blank">
-                              <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                            </a>
-                          {% endif %}
-                        </td>
-                      {% endraw %} -->
-                      {{ 'Global' | Attribute:'EmailFooterSocials' }}
-                    </div>
-                  </div>
+                  {{ 'Global' | Attribute:'EmailFooterSocials' }}
                 </tr>
               </table>
             </center>
