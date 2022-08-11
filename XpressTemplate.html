@@ -582,8 +582,9 @@
                                                 {%-assign imageAsset = ''-%}
                                               {%-endif-%}
                                               <div class="card-wrapper">
+                                              {%-if detailsURL != ''-%}
                                                 <a href={{detailsURL | StripHtml}} target="_blank">
-                                                  <div>
+                                              {%-endif-%}                                                     <div>
                                                     <img class="card-image cld-hidpi" src={{imageAsset}} style="width: 100%;" data-imgcsswidth="full" alt=""/>
                                                   </div>
                                                   <span style="width:10%"></span>
@@ -591,10 +592,14 @@
                                                     <h3 style="margin-bottom: 5px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h3>
                                                     <h5 style="margin-bottom: 5px; text-align: center; padding-bottom: 10px;">{{subheading}}</h5>
                                                     <p>{{ summary }}</p>
-                                                    <button class="btn-details">{{ details }}</button>
-                                                  </div>
-                                                  <span style="width:10%"></span>
-                                                </a>
+                                                  {%-if detailsURL != ''-%}
+                                                    <button class="btn-details">Details</button>
+                                                  {%-endif-%}
+                                                </div>
+                                                <span style="width:10%"></span>
+                                            {%-if detailsURL != ''-%}
+                                              </a>
+                                            {%-endif-%}
                                               </div>
                                             {%-endif-%}
                                           {%- endfor -%}

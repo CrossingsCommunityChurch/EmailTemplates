@@ -245,22 +245,7 @@
       }
 
       .btn-details {
-        display: block;
-        width: 150px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px 15px;
-        text-align: center;
-        background-color: #fff;
-        transition: all 0.3s ease-in-out;
-        border: 3px solid #fff;
-        border-radius: 90px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-        font-size: 0.75rem;
-        box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 2px 4px rgb(0 0 0 / 24%);
-        cursor: pointer;
+        color: #fff; display: block; width: 150px; margin-left: auto; margin-right: auto; padding: 10px 15px; text-align: center; background-color: #838282; border: 3px solid #fff; border-radius: 90px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-size: 0.75rem; cursor: pointer;
       }
 
       /* -------------------------------------
@@ -619,7 +604,9 @@
                                                 {%-assign imageAsset = ''-%}
                                               {%-endif-%}
                                               <div class="card-wrapper">
+                                              {%-if detailsURL != ''-%}
                                                 <a href={{detailsURL | StripHtml}} target="_blank">
+                                              {%-endif-%}
                                                   <div>
                                                     <img class="card-image cld-hidpi" src={{imageAsset}} style="width: 100%;" data-imgcsswidth="full" alt="">
                                                   </div>
@@ -628,10 +615,14 @@
                                                     <h3 style="margin: 20px 0px 10px 0px; text-align: center; text-transform: uppercase;">{{ item.Title }}</h4>
                                                       <h5 style="margin-bottom: 5px; text-align: center; padding-bottom: 10px;">{{ subheading }}</h5>
                                                       <p>{{ summary }}</p>
+                                                    {%-if detailsURL != ''-%}
                                                       <button class="btn-details">Details</button>
+                                                    {%-endif-%}
                                                   </div>
                                                   <span style="width:10%"></span>
+                                              {%-if detailsURL != ''-%}
                                                 </a>
+                                              {%-endif-%}
                                               </div>
                                             {%-endif-%}
                                           {%- endfor -%}
