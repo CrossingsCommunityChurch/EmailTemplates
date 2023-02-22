@@ -1,0 +1,30 @@
+<h1><strong>Financial Assessment Submission {{ 'Now' | Date:'M/d/yyyy' }}</strong></h1>
+<br>
+<br>
+First Name: {{ Workflow | Attribute:'FirstName'}}<br>
+Last Name: {{ Workflow | Attribute:'LastName'}}<br>
+Email: {{ Workflow | Attribute:'Email'}}<br>
+<br>
+<center><h3>PRE-CLASS: STEWARDSHIP SELF-ASSESSMENT</h3></center>
+
+<p>Thank you for taking this self-assessment tool, it is designed to help you identify your financial health. Attached to this email you will find a PDF with the answers you selected, along with the scoring key.</p>
+
+
+<br>
+<br>
+<strong>{{ Workflow | Attribute:'BudgetTotal'}}</strong><br>
+<br>
+
+<strong>{{ Workflow | Attribute:'SpiritualTotal'}}</strong><br>
+<br>
+
+<strong>{{ Workflow | Attribute:'RetirementInvestingTotal'}}</strong><br>
+<br>
+
+<strong>{{ Workflow | Attribute:'DebtTotal'}}</strong><br>
+<br>
+
+<strong>{{ Workflow | Attribute:'PlanningTotal'}}</strong><br>
+<br>
+
+
