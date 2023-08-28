@@ -1,0 +1,27 @@
+{% raw %}
+<div>
+  {% if Person != null %}
+    {% assign personCampus =  Person | Campus | Property:'Name' %}
+  {% endif %}
+  <td class="media">
+      {% if personCampus == 'Crossings Edmond' %}
+        <a href="https://www.facebook.com/crossingsedmond" target="_blank" style="padding-right: 10px;">
+          <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+        </a>
+      {% else %}
+        <a href="https://www.facebook.com/crossingsokc" target="_blank" style="padding-right: 10px;">
+          <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
+        </a>
+      {% endif %}
+    {% if personCampus == 'Crossings Edmond' %}
+      <a href="https://www.instagram.com/crossingsedmond" target="_blank" style="padding-left: 10px;">
+        <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+      </a>
+    {% else %}
+      <a href="https://www.instagram.com/crossingsokc" target="_blank" style="padding-left: 10px;">
+        <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
+      </a>
+    {% endif %}
+  </td>
+</div>
+{% endraw %}

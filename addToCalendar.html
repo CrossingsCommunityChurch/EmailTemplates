@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar Invitation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>Upcoming Events</h1>
+
+	<p>Click the button below to add the following dates and times to your calendar:</p>
+
+	<ul id="event-dates">
+		<!-- This is where we'll dynamically insert the list of event dates -->
+	</ul>
+
+	<button onclick="addEventsToCalendar()">Add to Calendar</button>
+
+	<script>
+		// Define the array of event dates and times
+		var eventDates = [
+			"2023-04-10T09:00:00Z",
+			"2023-04-11T10:30:00Z",
+			"2023-04-12T14:00:00Z"
+		];
+
+		// Function to add the event dates to the user's calendar
+		function addEventsToCalendar() {
+			// Loop through each event date and add it to the appropriate calendar application
+			eventDates.forEach(function(date) {
+				// Check if the user is on an Apple device
+				if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+					// If so, use the Apple Calendar API to add the event
+					window.location.href = "calshow:" + date;
+				}
+				// Check if the user is on a device with the Google Calendar app installed
+				else if (navigator.userAgent.match(/Android.*Chrome\/[.0-9]* (Mobile)?/i)) {
+					// If so, use the Google Calendar API to add the event
+					window.location.href = "https://www.google.com/calendar/render?action=TEMPLATE&dates=" + date;
+				}
+				// If the user is on a desktop device or doesn't have the Google Calendar app installed
+				else {
+					// Use the Outlook Calendar API to add the event
+					window.location.href = "https://outlook.live.com/owa/?path=/calendar/action/compose&rru=addevent&startdt=" + date;
+				}
+			});
+		}
+
+		// Insert the list of event dates into the HTML
+		var eventDatesList = document.getElementById("event-dates");
+		eventDates.forEach(function(date) {
+			var li = document.createElement("li");
+			li.textContent = new Date(date).toLocaleString();
+			eventDatesList.appendChild(li);
+		});
+	</script>
+
+</body>
+</html>
