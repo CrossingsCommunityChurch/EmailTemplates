@@ -11,7 +11,7 @@
 	</head>
 
   <body class="">
-    <title>High School Students Template</title>
+    <title>Plain Template</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -109,13 +109,13 @@
         text-align: center;
         width: 100%;
       }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #F1F1F1 !important;
-          font-size: 12px;
-          text-align: center;
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+        color: #F1F1F1 !important;
+        font-size: 12px;
+        text-align: center;
       }
 
       /* -------------------------------------
@@ -129,7 +129,7 @@
         margin: 0;
         margin-bottom: 30px;
       }
-      h2 {
+	  	h2 {
         color: #1d242b !important;
         font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-weight: 700;
@@ -137,7 +137,7 @@
         margin: 0;
         margin-bottom: 25px;
       }
-      h3 {
+	  	h3 {
         color: #1d242b !important;
         font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-weight: 600;
@@ -145,7 +145,7 @@
         margin: 0;
         margin-bottom: 22px;
       }
-      h4 {
+		  h4 {
         color: #1d242b !important;
         font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-weight: 500;
@@ -155,7 +155,7 @@
         margin-bottom: 20px;
         margin-top: 20px;
       }
-        h5 {
+      h5 {
         color: #869098 !important;
         font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-weight: 500;
@@ -163,10 +163,12 @@
         line-height: 1.1;
         margin: 0;
         margin-bottom: 20px;
-        }
-      p {
-          color: black;
       }
+      p {
+        text-decoration: none;
+        color: black;
+      }
+        
       p,
       ul,
       ol {
@@ -176,14 +178,17 @@
         margin: 0;
         margin-bottom: 15px;
       }
+      
       p li,
       ul li,
       ol li {
         list-style-position: inside;
         margin-left: 5px;
       }
-
+      
       a {
+        text-decoration: none;
+        color: black;
         font-weight: 600;
       }
 
@@ -203,20 +208,20 @@
           border-radius: 5px;
           text-align: center;
       }
-        .btn a {
-          background-color: #838282 !important; 
-          border: solid 1px #F1F1F1 !important;
-          border-radius: 5px;
-          box-sizing: border-box;
-          color: #F1F1F1 !important;
-          cursor: pointer;
-          display: inline-block;
-          font-size: 14px;
-          font-weight: bold;
-          margin: 0;
-          padding: 12px 25px;
-          text-decoration: none;
-          text-transform: capitalize;
+      .btn a {
+        background-color: #838282 !important; 
+        border: solid 1px #F1F1F1 !important;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #F1F1F1 !important;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        padding: 12px 25px;
+        text-decoration: none;
+        text-transform: capitalize;
       }
 
       .btn-primary {
@@ -297,41 +302,13 @@
         margin: 20px 0;
       }
 
-        /* -------------------------------------
+      /* -------------------------------------
             CUSTOM CLASSES
       ------------------------------------- */
 
     .app-header {
       margin-top: 25px;
       text-align: center;
-    }
-
-    .card-wrapper {
-      background-color: #fff !important;
-      border-radius: 10px;
-      margin-top: 20px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .card-wrapper a {
-      text-decoration: none;
-    }
-
-    .card-image {
-      width: 100%;
-      border-radius: 10px 10px 0px 0px;
-    }
-    
-
-    .card-info {
-      align-items: center;
-      margin-bottom: 10px;
-      text-align: left;
-      padding: 30px;
-    }
-    .connect-wrapper {
-      align-items: center;
     }
 
     .media-wrapper {
@@ -350,7 +327,7 @@
       text-decoration: none !important;
     }
 
-      /* -------------------------------------
+        /* -------------------------------------
          ACTION CLASSES
       ------------------------------------- */
 
@@ -482,8 +459,8 @@
                 <tbody>
                   <tr>
                     <td class="app-header">
-                      <a href="https://crossings.church">
-                        <img class= "crossingsLogo" align="center" src="https://crossingscommunitychurch.github.io/EmailAssets/CS912header.jpg" width="600">
+                      <a href="https://crossings.church/mayfair">
+                        <img class= "crossingsLogo" align="center" src="https://crossingscommunitychurch.github.io/EmailAssets/StudentsHeader.jpg" width="500">
                       </a>
                     </td>
                   </tr>
@@ -493,118 +470,87 @@
                         <tbody>
 	  					            <tr>
 	  						            <td>
-	  				                  <!-- SIGNATURE AREA -->
+	  				                <!-- SIGNATURE AREA -->
 	  				                  <div class="structure-dropzone">
 	  				                  	<div class="dropzone">
-                                  <!-- <div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
-                                    <a href="https://crossings.church">
-                                      <img src="https://images.crossings.church/Images/Email%20template%20images/email-template-header-image.png" style="width: 100%;" data-imgcsswidth="full" alt="">
-                                    </a>
-                                  </div> -->
 	  						                  <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
 	  							                  <tbody>
 	  								                  <tr>
 	  									                  <td class="js-component-text-wrapper" style="padding-top: 20px;">
                                           <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component">
-                                              <h2 style="text-align: center; margin-top: 10px;">Email Title</h2>
-                                              <p style="text-align: left; ">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
-                                              </p>
-                                          </div>
-                                          <!-- <div class="structure-dropzone" style="margin-bottom: 25px;">
-                                            <div class="dropzone">
-                                              <div class="component component-button v2" data-state="component">
-                                                <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="top" align="center" class="button-innerwrap">
-                                                        <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
-                                                          <tbody>
-                                                            <tr>
-                                                              <td align="center" valign="middle" class="button-content">
-                                                                <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
-                                                              </td>
-                                                            </tr>
-                                                          </tbody>
-                                                        </table>
-                                                      </td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="structure-dropzone" style="margin-bottom: 25px;">
-                                            <div class="dropzone">
-                                              <div class="component component-button v2" data-state="component">
-                                                <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="top" align="center" class="button-innerwrap">
-                                                        <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
-                                                          <tbody>
-                                                            <tr>
-                                                              <td align="center" valign="middle" class="button-content">
-                                                                <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
-                                                              </td>
-                                                            </tr>
-                                                          </tbody>
-                                                        </table>
-                                                      </td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </div>
-                                            </div>
+                                            <h2 style="text-align: center; margin-top: 10px;">Email Title</h2>
+                                            <p style="text-align: left; ">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
+                                            </p>
                                           </div>
 	  									                  </td>
 	  								                  </tr>
 	  							                  </tbody>
-	  						                  </table> -->
-                                  <!-- Connect With Us  -->
-                                  <div class="component component-divider" data-state="component">
-                                    <hr style="border: 0px; height: 2px; background-color: #CFCECE !important; margin-top: 40px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
-                                  </div>
+	  						                  </table>
+                                  <!-- Resource Cards -->
                                   <center>
-                                    <table align="center" class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: center; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
-                                      <tr>
-                                        <div class="connect-wrapper">
-                                          <div class="media-wrapper">
-                                            {% raw %}
-                                            {% assign personCampus =  Person | Campus | Property:'Name' %}
-                                            <td class="media">
-                                              {% if personCampus == 'Crossings Edmond' %}
-                                                <a href="https://www.facebook.com/edmondstudents" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                                              </a>
-                                              {% else %}
-                                              <a href="https://www.facebook.com/okcstudents" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                                              </a>
-                                              {% endif %}
-                                              {% endraw %}
-                                            </td>
-                                            {% raw %}
-                                            {% assign personCampus =  Person | Campus | Property:'Name' %}
-                                            <td class="media">
-                                              {% if personCampus == 'Crossings Edmond' %}
-                                              <a href="https://www.instagram.com/edmondstudents" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                                              </a>
-                                              {% else %}
-                                              <a href="https://www.instagram.com/okcstudents" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                                              </a>
-                                              {% endif %}
-                                              {% endraw %}
-                                            </td>
-                                          </div>
-                                        </div>
+                                    <table align="center" width:"100%" border="0" cellpadding="0" cellspacing="0" style="min-width:100%; display: table; table-layout: auto; text-align: center; border-collapse: separate; border-spacing: 2px;">               
+                                      <colgroup>
+                                        <col span="1" style="width: 33.33%;">
+                                        <col span="1" style="width: 33.33%;">
+                                        <col span="1" style="width: 33.33%;">
+                                      </colgroup>
+                                      <tr style="text-align: center;">
+                                        <th style="width: 33.33%"class="actionItem">
+                                          <a style="width: 33.33%" href="https://crossings.church/group-finder">
+                                            <div>
+                                              <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/bible_studies.png">
+                                              <p style="font-size: 11px;">Find a Group</p>
+                                            </div>
+                                          </a>
+                                        </th>
+                                        <th style="width: 33.33%"class="actionItem">
+                                            <a href="https://crossings.church/prayer/prayer-request">
+                                            <div>
+                                              <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/grow.png">
+                                              <p style="font-size: 11px;">Prayer</p>
+                                            </div>
+                                          </a>
+                                        </th>
+                                        <th style="width: 33.33%"class="actionItem">
+                                          <a href="https://crossings.church/give">
+                                            <div>
+                                              <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/giving.png">
+                                              <p style="font-size: 11px;">Giving</p>
+                                            </div>
+                                          </a>
+                                        </th>
+                                      </tr>
+                                      <!-- second row -->
+                                      <tr style="text-align: center;">
+                                        <td class="actionItem">
+                                          <a href="https://crossings.church/worship">
+                                            <div>
+                                              <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/media.png">
+                                              <p style="font-size: 11px;">Worship</p>
+                                            </div>
+                                          </a>
+                                        </td>
+                                        <td class="actionItem">
+                                          <a href="https://crossings.church/info">
+                                            <div>
+                                              <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/info.png">
+                                              <p style="font-size: 11px;">Info</p>
+                                            </div>
+                                          </a>
+                                        </td>
+                                        <td class="actionItem">
+                                          <a href="https://crossings.church/locations/okc/serve/">
+                                            <div>
+                                              <img width="40" src="https://crossingscommunitychurch.github.io/EmailAssets/Email/volunteer.png">
+                                              <p style="font-size: 11px;">Volunteer</p>
+                                            </div>
+                                          </a>
+                                        </td>
                                       </tr>
                                     </table>
-                                  </center>
-                                  <!-- End Of Connect With Us  -->
+                                  </center> 
                                   <div class="component component-divider" data-state="component">
                                     <hr style="border: 0px; height: 2px; background-color: #CFCECE !important; margin-top: 20px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
                                   </div>
@@ -639,14 +585,14 @@
                                   <p style="margin-bottom: 0px; margin-top: 12px;">
                                     <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
                                       <small>
-                                        14600 N Portland Ave
+                                        2340 NW 50th St.
                                       </small>
                                     </a>
                                   </p>
                                   <p style="margin-bottom: 0px;">
                                     <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
                                       <small>
-                                        Oklahoma City, OK 73134
+                                        Oklahoma City, OK 73112
                                       </small>
                                     </a>
                                   </p>
@@ -667,11 +613,9 @@
                               <td align="center" style="padding: 12px;">
                                 <center>
                                   <p>
-                                    <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
-                                      <small>
-                                        Copyright © 2023 Crossings Community Church. All rights reserved.
-                                      </small>
-                                    </a>
+                                    <small>
+                                      Copyright © 2023 Crossings Community Church. All rights reserved.
+                                    </small>
                                   </p>
                                   [[ UnsubscribeOption ]]
                                 </center>

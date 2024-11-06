@@ -11,7 +11,7 @@
 	</head>
 
   <body class="">
-    <title>Prison Template</title>
+    <title>Plain Template</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -95,7 +95,7 @@
         background: #F1F1F1 !important;
         box-sizing: border-box;
         border-radius: 3px;
-        padding: 20px;
+        padding: 20px 20px 10px 20px;
       }
 
       .content-block {
@@ -109,13 +109,13 @@
         text-align: center;
         width: 100%;
       }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #F1F1F1 !important;
-          font-size: 12px;
-          text-align: center;
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+        color: #F1F1F1 !important;
+        font-size: 12px;
+        text-align: center;
       }
 
       /* -------------------------------------
@@ -129,7 +129,7 @@
         margin: 0;
         margin-bottom: 30px;
       }
-		  h2 {
+	  	h2 {
         color: #1d242b !important;
         font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-weight: 700;
@@ -137,7 +137,7 @@
         margin: 0;
         margin-bottom: 25px;
       }
-		  h3 {
+	  	h3 {
         color: #1d242b !important;
         font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-weight: 600;
@@ -302,7 +302,7 @@
         margin: 20px 0;
       }
 
-        /* -------------------------------------
+      /* -------------------------------------
             CUSTOM CLASSES
       ------------------------------------- */
 
@@ -327,6 +327,46 @@
       text-decoration: none !important;
     }
 
+        /* -------------------------------------
+         ACTION CLASSES
+      ------------------------------------- */
+
+    .actionItem {
+      text-align:center;
+      word-break: break-word;
+      padding: 2px;
+    }
+
+    .actionItem div {
+      border: solid 2px #CFCECE;
+      border-radius: 10px;
+      background-color: #e7e7e7;
+    }
+
+    .actionItem img {
+      padding-top:20px;
+    }
+
+    .actionItem a {
+      text-decoration: none;
+    }
+
+    .actionItem p {
+      color: #AFAFAF;
+      font-weight: 600;
+      padding-top:3px;
+    }
+
+    .actionWrapper {
+      color:#bdbdbd;
+      font-family:Lora,Georgia,Times New Roman,serif;
+      font-size: 12px;
+      line-height: 15=0%;
+      text-align:center;
+      width: 100%;
+      padding-top: 20px;
+    }
+
       /* -------------------------------------
           RESPONSIVE AND MOBILE FRIENDLY STYLES
       ------------------------------------- */
@@ -341,7 +381,7 @@
         table[class=body] td,
         table[class=body] span,
         table[class=body] a {
-          font-size: 16px !important;
+          font-size: 16px;
         }
         table[class=body] .wrapper,
         table[class=body] .article {
@@ -402,7 +442,7 @@
           font-family: inherit;
           font-weight: inherit;
           line-height: inherit;
-        }        
+        }          
       }
     </style>
 
@@ -419,8 +459,8 @@
                 <tbody>
                   <tr>
                     <td class="app-header">
-                      <a href="https://prisons.crossings.church">
-                        <img class= "crossingsLogo" align="center" src="https://crossingscommunitychurch.github.io/EmailAssets/prison_banner.png" width="auto">
+                      <a href="https://crossings.church">
+                        <img class= "crossingsLogo" align="center" src="https://crossingscommunitychurch.github.io/EmailAssets/ccc_vert.png" width="150">
                       </a>
                     </td>
                   </tr>
@@ -430,98 +470,47 @@
                         <tbody>
 	  					            <tr>
 	  						            <td>
-	  				                  <!-- SIGNATURE AREA -->
+	  				                <!-- SIGNATURE AREA -->
 	  				                  <div class="structure-dropzone">
 	  				                  	<div class="dropzone">
-	  						                  <table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
-	  							                  <tbody>
-	  								                  <tr>
-	  									                  <td class="js-component-text-wrapper" style="padding-top: 20px;">
-                                          <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component">
-                                            <h2 style="text-align: center; margin-top: 10px;">Email Title</h2>
-                                            <p style="text-align: left; ">
-                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
-                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reiciendis eos magni deleniti accusamus tempore, consectetur! Maxime amet, exercitationem nihil fugit eius esse voluptatum ab incidunt minima, saepe reiciendis ipsum.
-                                            </p>
+                                  <div class="component component-image" data-state="component" data-image-filename="placeholder-600x338.png" data-image-width="" data-image-height="">
+                                    <a href="https://crossings.church">
+                                      <img src="https://images.crossings.church/Images/Email%20template%20images/email-template-header-image.png" style="width: 100%;" data-imgcsswidth="full" alt="">
+                                    </a>
+                                  </div>
+	  						<table class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
+	  							<tbody>
+	  								<tr>
+	  									<td class="js-component-text-wrapper" style="padding-top: 20px;">
+                                        {% raw %}
+                                          <div class="component component-text" data-content="<h1>Email Title</h1>" data-state="component" style="margin-bottom: 25px;">
+                                            <p style="text-align: left; color: #000000">
+                                              Hi {{ Person.NickName }}, 
+                                              <br>
+                                              <br>
+                                              Thank you for signing up to serve at the Good Friday Experience during Holy Week! See what you signed up for below:
+                                              <br>
+                                              <br>
+                                                <span style="font-weight: bold;">Location:</span> OKC
+                                              <br>
+                                              <span style="font-weight: bold;">Chosen Role:</span> {{ GroupMember.GroupRole.Name }}
+                                              <br>
+                                              <span style="font-weight: bold;">Chosen Time/Times:</span> {{ GroupMember | Attribute:'Times' }}
+                                              <br>
+                                          </p>
                                           </div>
-                                          <div class="structure-dropzone" style="margin-bottom: 25px;">
-                                            <div class="dropzone">
-                                              <div class="component component-button v2" data-state="component">
-                                                <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="top" align="center" class="button-innerwrap">
-                                                        <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
-                                                          <tbody>
-                                                            <tr>
-                                                              <td align="center" valign="middle" class="button-content">
-                                                                <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
-                                                              </td>
-                                                            </tr>
-                                                          </tbody>
-                                                        </table>
-                                                      </td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="structure-dropzone" style="margin-bottom: 25px;">
-                                            <div class="dropzone">
-                                              <div class="component component-button v2" data-state="component">
-                                                <table class="button-outerwrap" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="top" align="center" class="button-innerwrap">
-                                                        <table border="0" cellpadding="0" cellspacing="0" class="button-shell">
-                                                          <tbody>
-                                                            <tr>
-                                                              <td align="center" valign="middle" class="button-content">
-                                                                <a class="button-link btn-primary" title="Push Me" href="http://" target="_blank" style="display: inline-block; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Push Me</a>
-                                                              </td>
-                                                            </tr>
-                                                          </tbody>
-                                                        </table>
-                                                      </td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </div>
-                                            </div>
-                                          </div>
-	  									                  </td>
-	  								                  </tr>
-	  							                  </tbody>
-	  						                  </table>      
+                                          {% endraw %}
+
+	  								</td>
+	  							</tr>
+	  						</tbody>
+	  					</table>
+                                  <!-- Resource Cards -->
                                   <!-- Connect With Us  -->
                                   <div class="component component-divider" data-state="component">
-                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 50px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
+                                    <hr style="border: 0px; height: 2px; background-color: #CFCECE !important; margin-top: 40px; margin-bottom: 30px; background-position: initial initial; background-repeat: initial initial;">
                                   </div>
-                                  <center>
-                                    <table align="center" class="component component-text" data-state="component" style="border-collapse: collapse; border-spacing: 0px; display: table; position: relative; text-align: center; vertical-align: top; width: 100%; background-color: rgba(0, 0, 0, 0);">
-                                      <tr>
-                                        <div class="connect-wrapper">
-                                          <div class="media-wrapper">
-                                            <td class="media">
-                                              <a href="https://www.facebook.com/groups/2629291197293643" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/facebook.png" width="34">
-                                              </a>
-                                            </td>
-                                            <td class="media">
-                                              <a href="https://www.instagram.com/crossingsprison/?hl=en" target="_blank">
-                                                <img src="https://crossingscommunitychurch.github.io/EmailAssets/instagram.png" width="34">
-                                              </a>
-                                            </td>
-                                          </div>
-                                        </div>
-                                      </tr>
-                                    </table>
-                                  </center>
                                   <!-- End Of Connect With Us  -->
-                                  <div class="component component-divider" data-state="component">
-                                    <hr style="border: 0px; height: 1px; background-color: #1d242b !important; margin-top: 20px; margin-bottom: 20px; background-position: initial initial; background-repeat: initial initial;">
-                                  </div>
                                 </div>
                               </div>
 	  						            </td>
@@ -533,71 +522,6 @@
                   <!-- END MAIN CONTENT AREA -->
                 </tbody>
 	  	        </table>
-              <!-- END CENTERED CONTAINER -->
-              <!-- START FOOTER -->
-              <!-- Footer Social Links -->
-	  			    <table class="null" width="100%" >
-	  			    	<tbody>
-                  <tr>
-                    <td>
-                      <center>
-                        <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
-                          <tbody>
-                            <tr>
-                              <td align="center" style="padding: 0px">
-                                <center>
-                                  <!-- insert image -->
-                                  <!-- <img src="" alt=""> -->
-                                  <a href="https://crossings.church">
-                                    <img align="center" style="width:150px;" src="https://crossingscommunitychurch.github.io/EmailAssets/Center_Logo_LightGray.png">
-                                  </a>
-                                  <p style="margin-bottom: 0px; margin-top: 12px;">
-                                    <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
-                                      <small>
-                                        10255 N Pennsylvania Ave
-                                      </small>
-                                    </a>
-                                  </p>
-                                  <p style="margin-bottom: 0px;">
-                                    <a style="color: #1d242b; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">
-                                      <small>
-                                        The Village, OK 73120
-                                      </small>
-                                    </a>
-                                  </p>
-                                </center>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <center>
-                        <table border="0" cellpadding="12" cellspacing="0" style="width: auto;">
-                          <tbody>
-                            <tr>
-                              <td align="center" style="padding: 12px;">
-                                <center>
-                                  <p>
-                                    <small>
-                                      Copyright © 2023 Crossings Community Church. All rights reserved.
-                                    </small>
-                                  </p>
-                                  [[ UnsubscribeOption ]]
-                                </center>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </center>
-                    </td>
-                  </tr>
-	  			      </tbody>
-	  		      </table>
-              <!-- END FOOTER -->
             </div>
           </td>
           <td>&nbsp;</td>

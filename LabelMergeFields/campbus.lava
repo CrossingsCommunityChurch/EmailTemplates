@@ -1,0 +1,6 @@
+{% assign groupId = Group.Id %}
+{% if groupId == 936233 or groupId == 983564 or groupId == 983565 %}
+{[ memberofgroups parentgroupid:'1001798' personid:'{{ Person.Id }}' groupterm:'' comment:'Middle School Bus' ]}
+{% elseif groupId == 936217 or groupId == 983563 %}
+{[ memberofgroups parentgroupid:'1001789' personid:'{{ Person.Id }}' groupterm:'' comment:'High School Bus' ]}
+{% endif %}
