@@ -1,0 +1,36 @@
+
+
+<p style="text-align: left; color: #000000">
+    Hi {{ Person.FirstName }}, 
+    <br>
+    <br>
+    Thank you for volunteering at a 2023 Christmas Candlelight Service. Please find the details of your assignment below:
+    <br>
+    <br>
+    {% if GroupMember.GroupId == 482410 %}
+        <span style="font-weight: bold;">Location:</span> OKC
+    {% elseif GroupMember.GroupId == 482411%}
+        <span style="font-weight: bold;">Location:</span> Edmond
+    {% endif %}
+    <br>
+    <span style="font-weight: bold;">Choosen Role:</span> {{ GroupMember.GroupRole.Name }}
+    <br>
+    <span style="font-weight: bold;">Choosen Time/Times:</span> {{ GroupMember | Attribute:'Times' }}
+    <br>
+</p>
+
+<p style="text-align: left; color: #000000">
+    <br>Please reply to this email if you have any questions or you need to make any adjustments with as many details as you can provide. We are thankful for each of you and your willingness to serve at the Candlelight services this year.<br>
+    <br>
+    Sincerely,
+    <br>
+    Michael Foster
+    <br>
+    Pastor of Connections Ministry - OKC
+    <br>
+    405-302-1211 (Talk/Text)
+    <br>
+    mfoster@crossings.church
+    <br>
+    <br>                                                
+</p>

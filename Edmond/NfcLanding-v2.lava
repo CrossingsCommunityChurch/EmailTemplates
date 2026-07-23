@@ -1,0 +1,252 @@
+
+{% assign orgName = 'Crossings Community Church' %}
+{% assign tagline = 'Helping people find and follow Jesus' %}
+{% assign logoUrl = 'https://crossingscommunitychurch.github.io/EmailAssets/CCC_Mark_Only_white.png' %}
+
+<div id="nfc-landing" v-cloak class="nfc-page">
+  <main class="nfc-card">
+
+    <header class="nfc-header">
+      <div class="nfc-avatar">
+        {% if logoUrl != '' %}
+          <img src="{{ logoUrl }}" alt="{{ orgName }} logo">
+        {% else %}
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 3h4v6h6v4h-6v8h-4v-8H4V9h6z"/>
+          </svg>
+        {% endif %}
+      </div>
+      <h1 class="nfc-title">{{ orgName }}</h1>
+      <p class="nfc-tagline">{{ tagline }}</p>
+    </header>
+
+    <a v-for="link in featured"
+       :key="link.title"
+       :href="link.url"
+       class="nfc-btn-featured"
+       rel="noopener">
+      <i :class="link.icon" aria-hidden="true"></i>
+      <span>[[ link.title ]]</span>
+    </a>
+
+    <nav class="nfc-links" aria-label="Quick links">
+      <a v-for="link in standard"
+         :key="link.title"
+         :href="link.url"
+         class="nfc-tile"
+         rel="noopener">
+        <i class="nfc-tile-icon" :class="link.icon" aria-hidden="true"></i>
+        <span class="nfc-tile-label">[[ link.title ]]</span>
+        <svg class="nfc-tile-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 6l6 6-6 6"/>
+        </svg>
+      </a>
+    </nav>
+
+  </main>
+</div>
+
+<script>
+  {%- assign currentDate = 'Now' | Date -%}
+  {%- assign firstDone = false -%}
+  window.__nfcLinks = [
+    {%- contentchannelitem where:'ContentChannelId == 1047' iterator:'items' sort:'Order' -%}
+      {%- for item in items -%}
+        {%- if item.StartDateTime >= currentDate -%}
+          {%- continue -%}
+        {%- endif -%}
+        {%- if item.ExpireDateTime <= currentDate -%}
+          {%- continue -%}
+        {%- endif -%}
+        {%- if firstDone -%},{%- endif -%}
+        {
+          "title": {{ item.Title | ToJSON }},
+          "url": {{ item | Attribute:'URL','RawValue' | ToJSON }},
+          "icon": {{ item | Attribute:'TablerIcon' | ToJSON }},
+          {%- assign feat = item | Attribute:'IsFeatured','RawValue' | Downcase -%}
+          "featured": {% if feat == 'true' %}true{% else %}false{% endif %}
+        }
+        {%- assign firstDone = true -%}
+      {%- endfor -%}
+    {%- endcontentchannelitem -%}
+  ];
+</script>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script>
+  Vue.createApp({
+    delimiters: ['[[', ']]'],
+    data() {
+      return { links: window.__nfcLinks || [] };
+    },
+    computed: {
+      featured() { return this.links.filter(function (l) { return l.featured; }); },
+      standard() { return this.links.filter(function (l) { return !l.featured; }); }
+    }
+  }).mount('#nfc-landing');
+</script>
+
+<style>
+  /*
+    Fixed dark design: this page is intentionally dark in both Rock theme
+    modes, so color tokens are defined locally instead of using Rock's
+    interface variables (which invert with the theme). Spacing, radius,
+    and typography reuse Rock's system variables.
+  */
+  #nfc-landing {
+    --nfc-page-bg: #0a0a0b;
+    --nfc-card-bg: #18181b;
+    --nfc-tile-bg: #232327;
+    --nfc-tile-border: #303036;
+    --nfc-tile-hover: #2c2c31;
+    --nfc-text: #f4f4f5;
+    --nfc-text-muted: #9d9da6;
+    --nfc-accent: #60a5fa;
+    --nfc-accent-bg: #0e2a52;
+    /* White logo mark, so the circle carries the brand blue */
+    --nfc-avatar-bg: #1d4ed8;
+    --nfc-avatar-fg: #ffffff;
+  }
+
+  [v-cloak] { display: none; }
+
+  .nfc-page, .nfc-page * { box-sizing: border-box; }
+
+  body:has(#nfc-landing) { background: #0a0a0b; }
+
+  .nfc-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-medium);
+    padding-bottom: calc(var(--spacing-medium) + env(safe-area-inset-bottom));
+    background: var(--nfc-page-bg);
+    font-family: var(--font-family-sans);
+    color: var(--nfc-text);
+  }
+
+  .nfc-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--nfc-card-bg);
+    border-radius: var(--rounded-huge);
+    padding: var(--spacing-large);
+  }
+
+  .nfc-header {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+  }
+
+  .nfc-avatar {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto var(--spacing-medium);
+    border-radius: 50%;
+    background: var(--nfc-avatar-bg);
+    color: var(--nfc-avatar-fg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .nfc-avatar img {
+    width: 58%;
+    height: 58%;
+    object-fit: contain;
+  }
+
+  .nfc-title {
+    margin: 0 0 var(--spacing-tiny);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--nfc-text);
+  }
+
+  .nfc-tagline {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--nfc-text-muted);
+  }
+
+  .nfc-btn-featured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xsmall);
+    min-height: 52px;
+    margin-bottom: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--nfc-accent-bg);
+    color: var(--nfc-accent);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--rounded-large);
+    text-decoration: none;
+    transition: filter 0.15s ease;
+  }
+
+  .nfc-btn-featured:hover,
+  .nfc-btn-featured:focus {
+    color: var(--nfc-accent);
+    text-decoration: none;
+    filter: brightness(1.2);
+  }
+
+  .nfc-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+
+  .nfc-tile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    min-height: 52px;
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--nfc-tile-bg);
+    border: 1px solid var(--nfc-tile-border);
+    border-radius: var(--rounded-large);
+    color: var(--nfc-text);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+
+  .nfc-tile:hover,
+  .nfc-tile:focus {
+    background: var(--nfc-tile-hover);
+    color: var(--nfc-text);
+    text-decoration: none;
+  }
+
+  .nfc-tile-icon {
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--nfc-text-muted);
+  }
+
+  .nfc-tile-label { flex: 1; }
+
+  .nfc-tile-chevron {
+    flex-shrink: 0;
+    color: var(--nfc-text-muted);
+    transition: transform 0.15s ease;
+  }
+
+  .nfc-tile:hover .nfc-tile-chevron { transform: translateX(2px); }
+
+  .nfc-btn-featured:focus-visible,
+  .nfc-tile:focus-visible {
+    outline: 2px solid var(--nfc-accent);
+    outline-offset: 2px;
+  }
+</style>

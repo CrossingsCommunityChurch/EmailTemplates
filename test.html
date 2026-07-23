@@ -1,0 +1,408 @@
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><noscript id="lava-fields">
+  {% comment %}  Lava Fields: Code-Generated from Template Editor {% endcomment %}
+  {% assign headerBackgroundColor = '#ffffff' %}
+  {% assign linkColor = '#2199e8' %}
+  {% assign bodyBackgroundColor = '#f3f3f3' %}
+  {% assign textColor = '#0a0a0a' %}
+  {% assign headerWidth = '250' %}
+  {% assign footerpixel = '20px' %}
+</noscript>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>{{ 'Global' | Attribute:'OrganizationName' }}</title>
+		<style>
+			@import url("https://use.typekit.net/xcw0guj.css");
+		</style>
+		<style class="ignore">
+			.js-editor-toolbar-content .component.component-code
+			{% if ShowBlockOptions == 'No' %}
+			,.js-editor-toolbar-content .component.component-button
+			,.js-editor-toolbar-content .component.component-text
+			,.js-editor-toolbar-content .component.component-image
+			,.js-editor-toolbar-content .component-divider
+			{% endif %}
+			{% if ShowRSVP == 'No' %}
+			,.js-editor-toolbar-content .component.component-rsvp
+			{% endif %}
+			{% if ShowColumnOptions == 'No' %}
+			,.js-editor-toolbar-structure
+			{% endif %}
+			{
+				display: none;
+			}
+			@media only screen and (min-width:1001px) {
+				img.header-img {
+					width: 100% !important;
+				}
+			}
+			@media only screen and (min-width:701px) and (max-width:899px) {
+				table.body {
+					width: 700px !important;
+				}
+				img.header-img {
+					width: 100% !important;
+				}
+				.content{
+					width: 550px !important;
+				}
+				td.side-blocks {
+					width: 115px !important;
+				}
+			}
+			@media only screen and (max-width:700px) {
+				table.body {
+					width: 580px !important;
+				}
+				img.header-img {
+					width: 100%!important;
+				}
+				.footer-logo {
+					text-align: center !important;
+					padding-bottom: 25px !important;
+				}
+				.footer-col {
+					display: block !important;
+					margin-bottom: 25px !important;
+					padding: 0 !important;
+					width: 100% !important;
+				}
+				.footer-col,
+				.footer-col td {
+					text-align: center !important;
+				}
+				.footer-col table {
+					width: 100% !important;
+				}
+			}
+			@media only screen and (max-width:500px) {
+				.footer-col {
+					width: 100% !important;
+				}
+			}
+			@media only screen and (max-width:450px) {
+				table.body {
+					width: 100% !important;
+				}
+				.footer-col {
+					width: 100% !important;
+				}
+				.youtube {
+					padding-right: 0 !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+  
+
+	<style>
+			table.body {
+				width: 100%;
+				max-width: 768px;
+			}
+			body,
+			html {
+				font-family: "proxima-nova", Arial, Helvetica, sans-serif;
+				color: {{ TextColor }};
+				hyphens: none;
+				font-size: 16px;
+				line-height: 17px;
+				margin: 0;
+				text-decoration: none;
+				Background-color: {{ BodyBackgroundColor }};
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6
+			{
+				color: {{ HeaderTextColor }};
+				font-weight: bold;
+				padding: 0;
+				margin: 5px 0px 5px 0px;
+			}
+			h1 {
+				font-size: 36px;
+				line-height: 30px;
+			}
+			h2 {
+				font-size: 25px;
+				line-height: 28px;
+			}
+			h3 {
+				font-size: 20px;
+				line-height: 26px;
+			}
+			h4 {
+				font-size: 18px;
+				line-height: 26px;
+			}
+			h5 {
+				font-size: 20px;
+				line-height: 26px;
+			}
+			h6 {
+				font-size: 16px;
+				line-height: 18px;
+			}
+
+			table {
+				border-collapse: collapse;
+			}
+            
+			a {
+				color: {{ LinkColor }};
+				text-decoration: none;
+			}
+
+			p {
+				margin-top: 0;
+			}
+
+			
+			table .component-text {
+				margin: 28px 0!important;
+				padding: 0;
+			}
+			#top-border {
+				height: 75px;
+			}
+
+			.color-blocks {
+				background-color: {{ HeaderBackgroundColor }};
+				height: 125px;
+			}
+
+			.color-blocks p {
+				color: {{ textColor }};
+			}
+
+			.side-blocks
+		    {
+				width: 5%;
+			}
+			
+			@media only screen and (max-width:700px) {
+			    .side-blocks
+		        {
+				    width: 10px;
+			    }
+			}
+			
+			{% comment %}
+			.social-logo {
+			    margin-top: 20px;
+				padding-right: 5px;
+				padding-bottom: 0px;
+			}
+			.social-logo img {
+				height: 35px;
+				width: 35px;
+			}
+			{% endcomment %}
+			
+			.footer-col {
+				padding: 28px;
+				width: 50%;
+			}
+			.footer {
+				font-size: 14px;
+				line-height: 22px;
+				width: 100%;
+			}
+			.footer a {
+				color: {{ LinkColor }};
+			}
+			.footer-logo {
+				padding: 50px 28px 0;
+			}
+			
+
+			.button-link {
+			    color: {{ ButtonColor }};
+			    background-color: {{ ButtonBackgroundColor }}!important;
+			    border:none!important;
+			    padding: 10px!important;
+                display: inline-block!important;
+			}
+			
+			/* .button-shell, .button-content {
+			    background-color: {{ ButtonBackgroundColor }}!important;
+			    margin-bottom: 30px;
+			} */
+			
+			.button-content {
+			    border-radius: 5px!important;
+			    padding: 10px;
+			    margin: 10px;
+			}
+			
+			.large-8 {
+			    width: 66%;
+			}
+			
+			.large-6 {
+			    width: 50%;
+			}
+			
+			.large-4 {
+			    width: 33%;
+			}
+			
+			.large-3 {
+			    width: 25%;
+			}
+			
+			.large-12 {
+			    width: 100%;
+			}
+			
+			@media only screen and (max-width:700px) {
+			    .large-6 {
+			        width: 100%;
+			    }
+			}
+
+		</style>
+
+ <center>
+    <table class="body">
+	    <tr>
+	        <td>
+	            <div align="center" style="height: auto" class="color-blocks">
+                    <a href="{{ 'Global' | Attribute:'OrganizationWebsite'}}" target="_blank">
+                        <img 
+                          src="/Content/EmailTemplates/CypressblacklogoEmail.png" 
+                          width="{{headerWidth}}" 
+                          height="auto"
+                          style="display: block; margin: 0 auto;" 
+                          class="logo" 
+                          align="center" 
+                        />
+                    </a>
+	            </div>
+		    </td>
+	    </tr>
+	    <tr>
+			<td class="float-center" align="center" valign="top">
+				<table>
+					<tr>
+						<td class="side-blocks">&nbsp;</td>
+						<td rowspan="2">
+							<div class="structure-dropzone">
+								<div class="dropzone">
+									<div class="component component-text" data-state="component">
+									    <!-- <img style="width: 100%;" src="/Content/EmailTemplates/EmailHeaderImage.jpg" alt="EmailHeaderImage.jpg"><br><br /> -->
+										<p>{% raw %}{{ Person.NickName }},{% endraw %}</p>
+                                                        <p>We are beyond excited for all that God has in store for 2025! This year, we're believing for incredible things as we follow His lead and continue our mission to .......</p>
+									</div>
+			                    </div>
+							</div>
+						</td>
+						<td class="side-blocks">&nbsp;</td>
+					</tr>
+				</table>
+			   <tr>
+                    <td>
+            	        <div style="align:middle; height: auto; text-align:center;" class="color-blocks">
+                                <div style="text-align:center !important;">
+                                    <table align="center">
+                                        <tr>
+                                            
+                                            {% assign logolink = 'Global' | Attribute:'OrganizationFacebook' %}
+                                            {% if logolink != null and logolink != empty %}
+                                                <td style="border: solid 10px #ffffff">
+                									<a target="_blank" class="social-logo" href="{{ logolink }}" style="color: transparent; text-decoration: unset !important;">
+                								        <img 
+                                                            src="/Content/EmailTemplates/Cypress_Facebook.png" 
+                                                            width="30" 
+                                                            height="30" 
+                                                            style="display: inline-block; width: 30px !important; height: 30px !important; padding-right: 5px;">
+                									</a>
+            									</td>
+        									{% endif %}
+									
+        									{% assign logolink = 'Global' | Attribute:'OrganizationTwitter' %}
+                                            {% if logolink != null and logolink != empty %}
+                                                <td style="border: solid 10px #ffffff">
+                									<a class="social-logo" href="{{ logolink }}" style="color: transparent; text-decoration: unset !important">
+                									    <img 
+                                                            src="/Content/EmailTemplates/twitter_white.png" 
+                                                            width="30" 
+                                                            height="30" 
+                                                            style="display: inline-block; width: 30px !important; height: 30px !important; padding-right:5px;">
+                									</a>
+            									</td>
+        									{% endif %}
+									
+        									{% assign logolink = 'Global' | Attribute:'OrganizationVimeo' %}
+                                            {% if logolink != null and logolink != empty %}
+                                                <td style="border: solid 10px #ffffff">
+                									<a class="social-logo" href="{{ logolink }}" style="color: transparent; text-decoration: unset !important;">
+                										<img 
+                                                            src="/Content/EmailTemplates/vimeo.png" 
+                                                            width="30" 
+                                                            height="30" 
+                                                            style="display: inline-block; width: 30px !important; height: 30px !important; padding-right:5px;">
+                									</a>
+            									</td>
+        									{% endif %}
+									
+        									{% assign logolink = 'Global' | Attribute:'OrganizationInstagram' %}
+                                            {% if logolink != null and logolink != empty %}
+                                                <td style="border: solid 10px #ffffff">
+                									<a class="social-logo" href="{{ logolink }}" style="color: transparent; text-decoration: unset !important">
+                										<img 
+                                                            src="/Content/EmailTemplates/Cypress_instagram.png" 
+                                                            width="30" 
+                                                            height="30" 
+                                                            style="display: inline-block; width: 30px !important; height: 30px !important; padding-right:5px;">
+                									</a>
+            									</td>
+        									{% endif %}
+									
+        									{% assign logolink = 'Global' | Attribute:'OrganizationYoutube' %}
+                                            {% if logolink != null and logolink != empty %}
+                                                <td style="border: solid 10px #ffffff">
+                									<a class="social-logo" href="{{ logolink }}" style="color: transparent; text-decoration: unset !important">
+                										<img 
+                                                            src="/Content/EmailTemplates/Cypress_youtube.png" 
+                                                            width="30" 
+                                                            height="30" 
+                                                            style="display: inline-block; width: 30px !important; height: 30px !important; padding-right:5px;">
+                									</a>
+            									</td>
+        									{% endif %}
+									
+        									{% assign logolink = 'Global' | Attribute:'OrganizationAppLink' %}
+                                            {% if logolink != null and logolink != empty %}
+        									<!--<a class="social-logo" href="{{ logolink }}">
+        										<img width="30px" height="30px" src="/Content/EmailTemplates/spotify.png" style="padding-right:5px;">App
+        									</a>	
+        									-->
+        									
+        									{% endif %}
+									    </tr>
+        							</table>		
+    							</div>
+                                <p style="text-align:center;  font-weight: 400 !important; text-align: Center; line-height: 19px; font-size: {{ footerpixel }}; margin: 0; padding: 0 0 10px;" align="left">{{ 'Global' | Attribute:'OrganizationName' }}, {{ 'Global' | Attribute:'OrganizationAddress','Street1' }}, {{ 'Global' | Attribute:'OrganizationAddress','City' }}, {{ 'Global' | Attribute:'OrganizationAddress','State' }} {{ 'Global' | Attribute:'OrganizationAddress','PostalCode' }}</p>
+                                <p style="text-align:center; font-size: {{ footerpixel }}; margin: 0; padding: 0 0 10px;">
+                                    <a href="{{ 'Global' | Attribute:'OrganizationWebsite' }}"style=""><b>{{ 'Global' | Attribute:'OrganizationWebsite' }}</b></a> <br />
+                                    <div style="text-align:center !important;width: 100%; font-size: 12px;  margin-bottom: 24px;"><span style="display:none;">[[ UnsubscribeOption ]]</span><a href="{% raw %}{{ 'Global' | Attribute:'PublicApplicationRoot' }}Unsubscribe/{{ Person | PersonActionIdentifier:'Unsubscribe' }}?CommunicationId={{ Communication.Id }}{% endraw %}"><b>Manage Preferences</b></a></div>
+                                </p>
+                			     </div>
+            			    </td>
+            			</tr>
+				    </td>
+	            </tr>
+	       </table>
+	   </center>
+	</body>
+</html>
+```
